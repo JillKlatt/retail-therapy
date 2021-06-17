@@ -9,12 +9,11 @@ import pageReducer from './components/reducers/pageReducer';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 
-const store = createStore(pageReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// const store = createStore(pageReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+
+    <App />,
   document.getElementById('root')
 );
 
