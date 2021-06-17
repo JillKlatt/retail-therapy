@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import Welcome from './Pages/Welcome';
-import Leaderboard from './Pages/Leaderboard';
-import Game from './Pages/Game';
-import About from './Pages/About';
+import Welcome from '../Pages/Welcome';
+import Leaderboard from '../Pages/Leaderboard';
+import Game from '../Pages/Game';
+import About from '../Pages/About';
 
 
 export default function pageReducer() {

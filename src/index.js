@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import pageReducer from './reducers/pageReducer'
+import pageReducer from './components/reducers/pageReducer';
 
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 
-const store = createStore(pageReducer)
+const store = createStore(pageReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <Provider store={store}>
