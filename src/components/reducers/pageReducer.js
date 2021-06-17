@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Welcome from '../Pages/Welcome';
 import Leaderboard from '../Pages/Leaderboard';
@@ -6,14 +6,15 @@ import Game from '../Pages/Game';
 import About from '../Pages/About';
 
 
-function pageReducer(state = {
-    username: "",
-    points: ""
-}, action) {
+function pageReducer(
+    state = {
+        username: ""
+    }, action
+) {
 
 // I think I need to impliment action.type, because that's actually what the reducer is for
 // function switchPage() {
-    switch (action) {
+    switch (action.type) {
         case "welcome":
 
             return <Welcome />
