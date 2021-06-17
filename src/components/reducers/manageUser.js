@@ -1,6 +1,6 @@
 export default function manageUser(state = {
     username: "",
-    points: "",
+    points: 0,
 }, action) {
     switch (action.type){
         case 'ADD_USER':
@@ -14,6 +14,7 @@ export default function manageUser(state = {
                 ...state,
                 points: (prevPoints => prevPoints += 1)
             }
+
         default:
             return state; 
     }
