@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import manageUser from './components/reducers/manageUser';
 
 import pageReducer from './components/reducers/pageReducer';
 
@@ -10,9 +11,10 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 
 // const store = createStore(pageReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(manageUser, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
     </Provider>,
   document.getElementById('root')
