@@ -1,10 +1,16 @@
+import React, { useState } from 'react';
+
+import Welcome from './Pages/Welcome';
+import Leaderboard from './Pages/Leaderboard';
+import Game from './Pages/Game';
+import About from './Pages/About';
 
 
 export default function pageReducer() {
 
     const [page, setPage] = useState("welcome")
 
-
+// I think I need to impliment action.type, because that's actually what the reducer is for
 function switchPage() {
     switch (page) {
         case "welcome":
