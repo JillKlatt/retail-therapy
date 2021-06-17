@@ -6,12 +6,13 @@ import Game from '../Pages/Game';
 import About from '../Pages/About';
 
 
-export default function pageReducer() {
-
-    const [page, setPage] = useState("welcome")
+function pageReducer(state= {
+    username: "",
+    points: ""
+}, action) {
 
 // I think I need to impliment action.type, because that's actually what the reducer is for
-function switchPage() {
+// function switchPage() {
     switch (page) {
         case "welcome":
 
@@ -36,17 +37,19 @@ function switchPage() {
         }
     }
 
-    return(
-        <div>
-        <nav>
-            <button onClick={() => setPage("welcome")}>Welcome</button>
-            <button onClick={() => setPage("game")}>Let's Play!</button>
-            <button onClick={() => setPage("leaderboard")}>View Leaderboard</button>
-            <button onClick={() => setPage("about")}>About</button>
-        </nav>
-        <div>
-            {switchPage()}
-        </div>
-    </div>
-    )
-}
+    // return(
+    //     <div>
+    //     <nav>
+    //         <button onClick={() => setPage("welcome")}>Welcome</button>
+    //         <button onClick={() => setPage("game")}>Let's Play!</button>
+    //         <button onClick={() => setPage("leaderboard")}>View Leaderboard</button>
+    //         <button onClick={() => setPage("about")}>About</button>
+    //     </nav>
+    //     <div>
+    //         {switchPage()}
+    //     </div>
+    // </div>
+    // )
+// }
+
+export default pageReducer
