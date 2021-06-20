@@ -8,7 +8,6 @@ import About from '../Pages/About';
 
 function pageReducer(
     state = {
-        username: ""
     }, action
 ) {
 
