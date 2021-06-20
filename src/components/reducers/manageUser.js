@@ -4,6 +4,7 @@ export default function manageUser(state = {
 }, action) {
     switch (action.type){
         case 'ADD_USER':
+            console.log(action.payload)
             return {
                 ...state,
                 username: "New"
