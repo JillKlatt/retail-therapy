@@ -11,9 +11,12 @@ import Form from './components/Form'
 
 function App() {
 
-  //Checks state on reload
+
   const state = useSelector((state) => state)
-  console.log(state)
+  //Checks state on reload
+  // console.log(state)
+
+  const [game, setGame] = useState(false)
 
   const dispatch = useDispatch()
 
@@ -22,8 +25,22 @@ function App() {
 
   const addPointAC = bindActionCreators(addPoint, dispatch)
 
+  function getUserInput() {
+          console.log(game)
+    switch (game){
+      case false:
 
-  // const loadLeaders = bindActionCreators(getLeaders, dispatch) 
+ 
+        return <Form createUserAC={createUserAC}/>
+
+
+      case true:
+        return <Welcome />
+
+        default:
+          return <Form createUserAC={createUserAC}/>
+    }
+  }
 
 
   return (
@@ -31,8 +48,8 @@ function App() {
       <header className="App-header">
         Current User: {state.user.username} <br></br>
         Current Points: {state.user.points}
-        <Welcome />
-        <Form createUserAC={createUserAC}/>
+        {getUserInput()}
+        {/* <Welcome /> */}
         <button onClick={addPointAC}>One Point!</button>
 
 
