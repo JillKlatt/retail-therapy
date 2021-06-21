@@ -19,14 +19,13 @@ export const addPoint = (amount) => {
 
 export const getLeaders = () => {
     return (dispatch) => {
-        dispatch({type: "LOADING"})
-
-        fetch("http://localhost:3001/users")
+        console.log(dispatch)
+        fetch("http:///127.0.0.1:3001/users")
         .then(resp => resp.json())
-        .then(users => {
+        .then(data => {
             dispatch({
                 type: "GET_LEADERS",
-                payload: users
+                payload: data
             })
         })
     }
