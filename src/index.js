@@ -4,15 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import reducers from './components/reducers/index';
-import manageUser from './components/reducers/manageUser';
-import pageReducer from './components/reducers/pageReducer';
+import reducers from './components/Reducers/index';
+// import manageUser from './components/reducers/manageUser';
+// import pageReducer from './components/reducers/pageReducer';
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk'
 
-// const store = createStore(pageReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const enhancers = composeEnhancers(applyMiddleware(thunk))
+
+const store = createStore(reducers, {}, enhancers)
+// const store = createStore(reducers, )
 
 ReactDOM.render(
   <Provider store={store}>
