@@ -1,8 +1,9 @@
-import { useState } from 'react' 
+import { useState, useEffect } from 'react' 
 
 function UsernameInput(props) {
 
     const [username, setUsername] = useState("")
+    const [didUserInput, setDidUserInput] = useState(null)
 
     const onChange = e => {
         setUsername(e.target.value)
@@ -13,6 +14,15 @@ function UsernameInput(props) {
         props.createUserAC(username)
         setUsername("")
     }
+
+    useEffect(() => {
+        function toggleUserInput(status) {
+            setDidUserInput(status.didUserInput)
+        }
+    }
+    )
+
+
 
     return (
         <div>
