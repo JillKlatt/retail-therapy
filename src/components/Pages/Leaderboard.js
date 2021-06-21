@@ -1,26 +1,56 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { getLeaders } from '../Actions/index'
-import { manageLeaders } from '../Reducers/manageLeaders'
+import manageLeaders from '../Reducers/manageLeaders.js'
+import { bindActionCreators } from 'redux'
+// import { getLeaders } from './components/Actions/index'
+import { useSelector, useDispatch } from 'react-redux'
 
 function Leaderboard() {
-    // console.log()
 
-    function loadLeaders() {
-        const leaders = getLeaders(dispatch)
-        // const leaders = manageLeaders(dispatch)
-        // debugger
-        leaders.map(<li>{u => u.username}</li>)
-    }
+    const [leaders, setLeaders] = useState([])
 
+    useEffect(() => {
+        fetch("http:///127.0.0.1:3001/users")
+        .then(resp => resp.json())
+        .then(data => {
+ 
+            setLeaders(data)
+        }) }, [])
+
+    function renderLeaders(){
+        console.log(leaders)
+        
+        return (leaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
+        )}
 
     return (
         <div>
             Leaderboard!
-            <ul>
-                {leaders}
-            </ul>
+            <ol>
+                {/* {loadLeaders()} */}
+                {renderLeaders()}
+            </ol>
         </div>
     )
 } 
 
 export default Leaderboard;
+
+// console.log()
+    // const dispatch = useDispatch()
+    // const loadLeaders = bindActionCreators(getLeaders, dispatch)
+
+    // console.log(loadLeaders())
+    // const leaders = manageLeaders()
+    // console.log(leaders)
+
+
+    // function loadLeaders() {
+    //     const leaders = manageLeaders("GET_LEADERS")
+        // debugger
+        // const leaders = getLeaders()
+        // console.log(leaders)
+        // const leaders = manageLeaders(dispatch)
+        // debugger
+        // leaders.map(<li>{u => u.username}</li>)
+    // }
