@@ -17,6 +17,23 @@ export const addPoint = (amount) => {
     }
 }
 
+export const submitGame = (user) => {
+    return (dispatch) => {
+    fetch("http:///127.0.0.1:3001/users", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+        },
+        body: JSON.stringify({user}),
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        dispatch(createUser(data))
+    })
+    }
+}
+
 export const getLeaders = () => {
     return (dispatch) => {
         console.log(dispatch)
