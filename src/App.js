@@ -5,7 +5,7 @@ import Welcome from './components/Pages/Welcome'
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { createUser, addPoint } from './components/Actions/index'
+import { createUser, addPoint, getLeaders } from './components/Actions/index'
 import Form from './components/Form'
 
 
@@ -22,11 +22,14 @@ function App() {
 
   const addPointAC = bindActionCreators(addPoint, dispatch)
 
+  const loadLeaders = bindActionCreators(getLeaders, dispatch) 
+
 
   return (
     <div className="App">
       <header className="App-header">
-        {state.user.points}
+        Current User: {state.user.username} <br></br>
+        Current Points: {state.user.points}
         <Welcome />
         <Form createUserAC={createUserAC}/>
         <button onClick={addPointAC}>One Point!</button>
