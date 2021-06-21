@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 import Leaderboard from './Leaderboard';
 import Game from './Game';
@@ -33,16 +39,18 @@ function Welcome() {
 
 
     return (
+        <Router>
         <div>
         <nav>
-            <button onClick={() => setPage("game")}>Let's Play!</button>
-            <button onClick={() => setPage("leaderboard")}>View Leaderboard</button>
-            <button onClick={() => setPage("about")}>About</button>
+            <Link to='/' onClick={() => setPage("game")}>Let's Play!</Link>
+            <Link to='/leaderboard' onClick={() => setPage("leaderboard")}>Leaderboard!</Link>
+            <Link to='/about' onClick={() => setPage("about")}>About</Link>
         </nav>
         <div>
             {switchPage()}
         </div>
     </div>
+    </Router>
     )
 } 
 
