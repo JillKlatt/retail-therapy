@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Leaderboard from './Leaderboard';
 import Game from './Game';
 import About from './About'
+// import Form from '../Form'
 
 function Welcome() {
 
