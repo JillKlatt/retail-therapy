@@ -17,6 +17,7 @@ export default function manageUser(state = {
                 points: state.points + 1
             }
 
+
         default:
             return state; 
     }
