@@ -5,8 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import reducers from './components/Reducers/index';
-// import manageUser from './components/reducers/manageUser';
-// import pageReducer from './components/reducers/pageReducer';
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -17,7 +15,6 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancers = composeEnhancers(applyMiddleware(thunk))
 
 const store = createStore(reducers, {}, enhancers)
-// const store = createStore(reducers, )
 
 ReactDOM.render(
   <Provider store={store}>
