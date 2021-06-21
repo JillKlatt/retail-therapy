@@ -2,7 +2,7 @@
 import './App.css';
 // import pageReducer from './components/reducers/pageReducer';
 import Welcome from './components/Pages/Welcome'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { createUser, addPoint, getLeaders } from './components/Actions/index'
@@ -21,6 +21,7 @@ function App() {
   // console.log(createUserAC)
 
   const addPointAC = bindActionCreators(addPoint, dispatch)
+
 
   // const loadLeaders = bindActionCreators(getLeaders, dispatch) 
 
