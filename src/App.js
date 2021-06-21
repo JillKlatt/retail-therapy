@@ -22,7 +22,7 @@ function App() {
 
   const addPointAC = bindActionCreators(addPoint, dispatch)
 
-  const loadLeaders = bindActionCreators(getLeaders, dispatch) 
+  // const loadLeaders = bindActionCreators(getLeaders, dispatch) 
 
 
   return (
