@@ -19,15 +19,15 @@ function Leaderboard() {
 
     function renderLeaders(){
         console.log(leaders)
+        const sortedLeaders = leaders.sort((a, b) => (a.points < b.points) ? 1 : -1)
         
-        return (leaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
+        return (sortedLeaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
         )}
 
     return (
         <div>
             Leaderboard!
             <ol>
-                {/* {loadLeaders()} */}
                 {renderLeaders()}
             </ol>
         </div>
