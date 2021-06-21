@@ -7,13 +7,14 @@ export default function manageUser(state = {
             console.log(action.payload)
             return {
                 ...state,
-                username: "New"
+                username: action.payload
             }
 
         case 'ADD_POINT':
+            // debugger
             return {
                 ...state,
-                points: (prevPoints => prevPoints += 1)
+                points: state.points + 1
             }
 
         default:
