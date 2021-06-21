@@ -30,7 +30,6 @@ function Welcome() {
              
             return <About />
     
-
         default:
 
             return <About />;
