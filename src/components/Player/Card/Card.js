@@ -6,15 +6,15 @@ import { changeRound } from '../../Actions/index'
 function Card(props) {
 
     const state = useSelector((state) => state)
+    const round = state.round
 
     const dispatch = useDispatch()
   
-    //Create User and Test Point Count
     const changeRoundAC = bindActionCreators(changeRound, dispatch)
 
     const renderOutcome = () => {
         alert(props.outcome)
-        changeRoundAC(2)
+        changeRoundAC()
         }
 
 
