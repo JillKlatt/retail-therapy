@@ -23,3 +23,8 @@ jQuery methods.
 [X] Post new data to the backend and have it immediately render
 [ ] Remove nameInput after user submits name
 
+
+## 6/22
+[ ] Add first Prompt/Person
+[ ] Add two Cards/Options
+
