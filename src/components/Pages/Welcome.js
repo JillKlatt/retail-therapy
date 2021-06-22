@@ -41,8 +41,8 @@ function Welcome() {
         <Router>
         <div>
         <nav>
-            <Link to='/' onClick={() => setPage("game")}>Let's Play!</Link>
-            <Link to='/leaderboard' onClick={() => setPage("leaderboard")}>Leaderboard!</Link>
+            <span><Link to='/game' onClick={() => setPage("game")}>Let's Play!</Link></span>
+            <Link to='/leaderboard' onClick={() => setPage("leaderboard")}>Leaderboard   </Link>
             <Link to='/about' onClick={() => setPage("about")}>About</Link>
         </nav>
         <div>
