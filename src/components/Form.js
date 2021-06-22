@@ -13,7 +13,9 @@ function UsernameInput(props) {
         e.preventDefault()
         props.createUserAC(username)
         setUsername("")
+        props.setGame(false)
     }
+
 
     useEffect(() => {
         function toggleUserInput(status) {
