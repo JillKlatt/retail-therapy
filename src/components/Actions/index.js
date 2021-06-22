@@ -17,6 +17,15 @@ export const addPoint = (amount) => {
     }
 }
 
+export const changeRound = (round) => {
+    return (dispatch) => {
+        dispatch ({
+            type: "CHANGE_ROUND",
+            payload: round
+        })
+    }
+}
+
 export const submitGame = (user) => {
     return (dispatch) => {
     fetch("http:///127.0.0.1:3001/users", {
