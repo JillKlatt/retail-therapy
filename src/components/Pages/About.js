@@ -5,7 +5,8 @@ function About() {
 
     return (
         <div>
-            About!
+            Here's where the about will go! <br></br>
+            Wow! So much info! Who knew!
         </div>
     )
 } 
