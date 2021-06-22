@@ -21,10 +21,21 @@ jQuery methods.
 [X] Grab data from database
 [X] Organize data in point order
 [X] Post new data to the backend and have it immediately render
-[ ] Remove nameInput after user submits name
+[X] Remove nameInput after user submits name
 
 
 ## 6/22
-[ ] Add first Prompt/Person
-[ ] Add two Cards/Options
+[X] Add first Prompt/Person
+[X] Add two Cards/Options
+
+## 6/23
+[ ] Change round to store in store
+[ ] Figure out how to change round (action/dispatch?)
+[ ] ^^ P sure that's all we need to do (You got this!)
+
+## 6/24
+[ ] Add story
+
+## 6/25
+[ ] Add styling
 
