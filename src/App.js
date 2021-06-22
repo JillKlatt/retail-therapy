@@ -49,7 +49,7 @@ function App() {
         Current User: {state.user.username} <br></br>
         Current Points: {state.user.points}
         {getUserInput()}
-        {/* <Welcome /> */}
+        <Welcome />
         <button onClick={addPointAC}>One Point!</button>
 
 
