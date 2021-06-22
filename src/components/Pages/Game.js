@@ -14,7 +14,7 @@ function Game() {
     
     const [user, setUser] = useState(state.user)
 
-    const round = useSelector((state) => state.round)
+    const round = useSelector((state) => state.round.round)
 
     const [currentRound, setCurrentRound] = useState(round)
 
@@ -45,12 +45,12 @@ function Game() {
                 return <RoundOne setCurrentRound={setCurrentRound}/>
 
 
-            case 2:
+            case 1:
                 console.log(round)
                 return <RoundTwo />
 
             default:
-                return `Something's wrong, round is currently round.${round.round}`
+                return `Something's wrong, round is currently: ${round}`
         }
     }
 
