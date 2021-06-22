@@ -36,6 +36,7 @@ function Game() {
     }
 
     //case action statement about which round
+    //Will change round to start at one after adding a "Begin" button
 
     function renderRounds() {
         switch(round){
@@ -44,12 +45,12 @@ function Game() {
                 return <RoundOne setCurrentRound={setCurrentRound}/>
 
 
-            case "2":
+            case 2:
                 console.log(round)
                 return <RoundTwo />
 
             default:
-                return "<Welcome />"
+                return `Something's wrong, round is currently round.${round.round}`
         }
     }
 
@@ -59,7 +60,7 @@ function Game() {
             <br></br>
             {renderRounds()}
             <br></br>
-            <button onClick={submitGame}>Submit Score!</button>
+            <button onClick={submitGame}> Finish Game & Submit Score!</button>
         </div>
     )
 } 
