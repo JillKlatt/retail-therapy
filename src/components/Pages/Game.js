@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import Villain from '../Player/Villain/Villain'
 import Card from '../Player/Card/Card'
 import RoundOne from '../Rounds/RoundOne'
+import RoundTwo from '../Rounds/RoundTwo'
+
 
 
 function Game() {
@@ -11,6 +13,9 @@ function Game() {
     const state = useSelector((state) => state)
     
     const [user, setUser] = useState(state.user)
+
+    const [round, setRound] = useState("1")
+
     console.log(state.user)
 
     function submitGame() {
@@ -30,11 +35,28 @@ function Game() {
 
     //case action statement about which round
 
+    function renderRounds() {
+        switch(round){
+            case "1":                
+                console.log(round)
+                return <RoundOne setRound={setRound}/>
+
+
+            case "2":
+                console.log(round)
+                return <RoundTwo setRound={setRound}/>
+
+            default:
+                return "<Welcome />"
+        }
+    }
 
     return (
         <div>
-            Here's where the game will go! Woooo! <br></br>
-        {RoundOne}
+            For right now, the game will not hold your place, so don't click away after you've started!
+            <br></br>
+            {renderRounds()}
+            <br></br>
             <button onClick={submitGame}>Submit Score!</button>
         </div>
     )
