@@ -21,40 +21,58 @@ function App() {
   const createUserAC = bindActionCreators(createUser, dispatch)
   const addPointAC = bindActionCreators(addPoint, dispatch)
 
-  const [game, setGame] = useState(false)
+  const [game, setGame] = useState(true)
   useEffect(() => {
 
   })
 
   function getUserInput() {
-          console.log(game)
-    switch (game){
-      case false:
+    if (game)
+    return <Form createUserAC={createUserAC} setGame={setGame}/> 
+  }
 
-        return <Form createUserAC={createUserAC}/>
-        //After form is submitted setGame(true)
+  // function getUserInput() {
+  //         console.log(game)
+  //   switch (game){
+  //     case false:
+
+  //       return <Form createUserAC={createUserAC}/>
+  //       //After form is submitted setGame(true)
 
 
-      case true:
-        return <Welcome />
+  //     case true:
+  //       return <Welcome />
 
-        default:
-          return <Form createUserAC={createUserAC}/>
-    }
+  //       default:
+  //         return <Form createUserAC={createUserAC}/>
+  //   }
+  // }
+
+  function displayUserInfo() {
+    if (state.user.username !== ""){
+    return (
+      <div>
+      Current User: {state.user.username} <br></br>
+      Current Points: {state.user.points}<br></br><br></br>
+      <Welcome />
+      </div>
+    )}
+    else
+      return (
+        <div>
+        Enter Your Name: {getUserInput()}
+        </div>
+      )
   }
 
 
   return (
     <div className="App">
       <header className="App-header">
-        Current User: {state.user.username} <br></br>
-        Current Points: {state.user.points}
-        {getUserInput()}
-        <Welcome />
+        {displayUserInfo()}
+        
         <button onClick={addPointAC}>Add One Point for Test</button>
 
-
-        
       </header>
     </div>
   );
