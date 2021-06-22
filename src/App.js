@@ -15,23 +15,24 @@ function App() {
   const state = useSelector((state) => state)
   //Checks state on reload
   // console.log(state)
-
-  const [game, setGame] = useState(false)
-
   const dispatch = useDispatch()
 
+  //Create User and Test Point Count
   const createUserAC = bindActionCreators(createUser, dispatch)
-  // console.log(createUserAC)
-
   const addPointAC = bindActionCreators(addPoint, dispatch)
+
+  const [game, setGame] = useState(false)
+  useEffect(() => {
+
+  })
 
   function getUserInput() {
           console.log(game)
     switch (game){
       case false:
 
- 
         return <Form createUserAC={createUserAC}/>
+        //After form is submitted setGame(true)
 
 
       case true:
@@ -50,7 +51,7 @@ function App() {
         Current Points: {state.user.points}
         {getUserInput()}
         <Welcome />
-        <button onClick={addPointAC}>One Point!</button>
+        <button onClick={addPointAC}>Add One Point for Test</button>
 
 
         
