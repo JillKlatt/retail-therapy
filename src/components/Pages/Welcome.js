@@ -40,11 +40,11 @@ function Welcome() {
         <div>
         <nav>
             <span><Link to='/game' onClick={() => setPage("game")}>Let's Play!</Link></span>
-            <span class="navigationSpace"/>
+            <span className="navigationSpace"/>
             <Link to='/leaderboard' onClick={() => setPage("leaderboard")}>Leaderboard   </Link>
-            <span class="navigationSpace"/>
+            <span className="navigationSpace"/>
             <Link to='/about' onClick={() => setPage("about")}>About</Link>
-            <span class="navigationSpace"/>
+            <span className="navigationSpace"/>
         </nav>
         <div>
             {switchPage()}
