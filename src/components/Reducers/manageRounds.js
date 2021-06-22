@@ -4,7 +4,7 @@ export default function manageRounds(state = 0, action){
             console.log(action)
             return {
                 ...state, 
-                round: [state.round, action.payload]
+                round: [action.payload]
         
             }
 
