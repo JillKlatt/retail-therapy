@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 // import { submitGame } from '../Actions/index'
+import Villain from '../Player/Villain/Villain'
+import Card from '../Player/Card/Card'
+import RoundOne from '../Rounds/RoundOne'
 
 
 function Game() {
@@ -24,14 +27,14 @@ function Game() {
         .then(data => console.log(data))
         setUser("")
     }
-    // function finishGame() {
-    //     submitGame()
-    // }
+
+    //case action statement about which round
 
 
     return (
         <div>
             Here's where the game will go! Woooo! <br></br>
+        {RoundOne}
             <button onClick={submitGame}>Submit Score!</button>
         </div>
     )
