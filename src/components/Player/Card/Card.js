@@ -1,38 +1,63 @@
-import React from 'react';
-// import { Modal } from '@material-ui/core/Modal';
-// import SimpleModal from '../Modal'
+import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { changeRound } from '../../Actions/index'
 
-class Card extends React.Component {
+function Card(props) {
 
+    const state = useSelector((state) => state)
 
-    constructor(props){
-        super(props);
-        this.choice = props.choice
-        this.outcome = props.outcome
-        this.setRound = props.changeRound
-    }
+    const dispatch = useDispatch()
+  
+    //Create User and Test Point Count
+    const changeRoundAC = bindActionCreators(changeRound, dispatch)
 
-    // function changeRound() {
-    //     console.log(this.props)
-    //     this.props.setRound("2")
-    // }
-
-
-    renderOutcome = () => {
-        // debugger
-        alert(this.outcome)
-        this.setRound("2")
+    const renderOutcome = () => {
+        alert(props.outcome)
+        changeRoundAC(2)
         }
 
-    render(){
-        return(
-            <div>
-                <button onClick={this.renderOutcome}>{this.choice}</button>
-            </div>
 
-        )
-    }
-
+    return(
+        <div>
+            <button onClick={renderOutcome}>{props.choice}</button>
+        </div>
+    )
 }
 
 export default Card
+
+// class Card extends React.Component {
+
+
+//     constructor(props){
+//         super(props);
+//         this.choice = props.choice
+//         this.outcome = props.outcome
+//         this.setRound = props.setCurrentRound
+//     }
+
+//     // function changeRound() {
+//     //     console.log(this.props)
+//     //     this.props.setRound("2")
+//     // }
+
+
+//     renderOutcome = () => {
+//         // debugger
+//         alert(this.outcome)
+//         this.setRound(1)
+//         }
+
+//     render(){
+//         return(
+//             <div>
+//                 <button onClick={this.renderOutcome}>{this.choice}</button>
+//             </div>
+
+//         )
+//     }
+
+// }
+
+// export default Card
