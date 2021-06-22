@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
@@ -38,17 +36,21 @@ function Welcome() {
 
 
     return (
-        <Router>
+        <Router>       
         <div>
         <nav>
             <span><Link to='/game' onClick={() => setPage("game")}>Let's Play!</Link></span>
+            <span class="navigationSpace"/>
             <Link to='/leaderboard' onClick={() => setPage("leaderboard")}>Leaderboard   </Link>
+            <span class="navigationSpace"/>
             <Link to='/about' onClick={() => setPage("about")}>About</Link>
+            <span class="navigationSpace"/>
         </nav>
         <div>
             {switchPage()}
         </div>
     </div>
+
     </Router>
     )
 } 
