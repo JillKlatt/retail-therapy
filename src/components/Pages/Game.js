@@ -14,9 +14,11 @@ function Game() {
     
     const [user, setUser] = useState(state.user)
 
-    const [round, setRound] = useState("1")
+    const round = useSelector((state) => state.round)
 
-    console.log(state.user)
+    const [currentRound, setCurrentRound] = useState(round)
+
+    console.log(round)
 
     function submitGame() {
         // debugger
@@ -37,14 +39,14 @@ function Game() {
 
     function renderRounds() {
         switch(round){
-            case "1":                
+            case 0:                
                 console.log(round)
-                return <RoundOne setRound={setRound}/>
+                return <RoundOne setCurrentRound={setCurrentRound}/>
 
 
             case "2":
                 console.log(round)
-                return <RoundTwo setRound={setRound}/>
+                return <RoundTwo />
 
             default:
                 return "<Welcome />"
