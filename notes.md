@@ -27,11 +27,14 @@ jQuery methods.
 ## 6/22
 [X] Add first Prompt/Person
 [X] Add two Cards/Options
+[X] Change round to store in store
+[X] Figure out how to change round (action/dispatch?)
+[X] ^^ P sure that's all we need to do (You got this!)
 
 ## 6/23
-[ ] Change round to store in store
-[ ] Figure out how to change round (action/dispatch?)
-[ ] ^^ P sure that's all we need to do (You got this!)
+[ ] Figure out points additions for correct answers
+[ ] Create Cards and changing display for selecting cards
+[ ] Move submit button to end of game
 
 ## 6/24
 [ ] Add story
