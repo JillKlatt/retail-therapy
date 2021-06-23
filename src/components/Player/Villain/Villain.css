@@ -1,13 +1,8 @@
 .villain-container{
-    width: 300px;
+    /* width: 300px; */
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
 }
-
-/* .villain-container:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px 0px;
-} */
 
 .villain-content{
     margin: 1rem;
