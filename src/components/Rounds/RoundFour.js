@@ -12,8 +12,8 @@ function RoundFour(props) {
                 <Villain name={"Villain Number Four!"} description={"V Scary"}/>
             </div>
             <div className='card-row'>
-            <Card answer={"incorrect"} choice={"Wrong Answer: Test One"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
-            <Card answer={"correct"} choice={"This is the right answer: Test One"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
+            <Card answer={"incorrect"} choice={"These are both wrong!"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
+            <Card answer={"incorrect"} choice={"These are both wrong!"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
             </div>
         </div>
         )

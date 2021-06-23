@@ -12,8 +12,8 @@ function RoundSeven(props) {
                 <Villain name={"Villain Number Seven!"} description={"V Scary"}/>
             </div>
             <div className='card-row'>
-            <Card answer={"incorrect"} choice={"Wrong Answer: Test One"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
-            <Card answer={"correct"} choice={"This is the right answer: Test One"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
+            <Card answer={"incorrect"} choice={"Wrong Answer"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
+            <Card answer={"correct"} choice={"This is the right answer"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
             </div>
         </div>
         )

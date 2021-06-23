@@ -32,14 +32,15 @@ jQuery methods.
 [X] ^^ P sure that's all we need to do (You got this!)
 
 ## 6/23
-[ ] Figure out points additions for correct answers
-[ ] Create Cards and changing display for selecting cards
+[X] Figure out points additions for correct answers
+[X] Create Cards and changing display for selecting cards
 [X] Move submit button to end of game
-[ ] Add EndGame round or something that happens after score submission
+[X] Add EndGame round or something that happens after score submission
 
 ## 6/24
 [ ] Add story
 [ ] Maybe store villian and card info on backend and just render on display in rounds?
+[ ] Render leaders to store so they don't have to re render each time?
 
 ## 6/25
 [ ] Add styling
