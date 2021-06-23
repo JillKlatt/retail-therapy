@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { changeRound } from '../../Actions/index'
+import { addPoint, changeRound } from '../../Actions/index'
 import './Card.css'
 
 function Card(props) {
@@ -13,9 +13,12 @@ function Card(props) {
   
     const changeRoundAC = bindActionCreators(changeRound, dispatch)
 
+    const addPointAC = bindActionCreators(addPoint, dispatch)
+
     const renderOutcome = () => {
         alert(props.outcome)
         changeRoundAC()
+            if (props.answer === 'correct'){ addPointAC()}
         }
 
 
