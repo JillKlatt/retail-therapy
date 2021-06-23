@@ -7,7 +7,7 @@ function RoundFour(props) {
 
     return (
     <div>    
-    <Villain name={"Villain Number Four!"}/>
+    <Villain name={"Villain Number Four!"} description={"V Scary"}/>
     <Card choice={"This is too scary!"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
     <Card choice={"You can take em!"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
     </div>
