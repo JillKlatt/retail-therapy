@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 
+// Is there a way to combine all of these into one to export?
 import RoundZero from '../Rounds/RoundZero'
 import RoundOne from '../Rounds/RoundOne'
 import RoundTwo from '../Rounds/RoundTwo'
@@ -9,6 +10,7 @@ import RoundFour from '../Rounds/RoundFour'
 import RoundFive from '../Rounds/RoundFive'
 import RoundSix from '../Rounds/RoundSix'
 import RoundSeven from '../Rounds/RoundSeven'
+import LastRound from '../Rounds/LastRound'
 
 
 
@@ -76,6 +78,10 @@ function Game() {
                 console.log(round)
                 return <RoundSeven setCurrentRound={setCurrentRound}/>
 
+            case 8:
+                console.log(round)
+                return <LastRound submitGame={submitGame}/>
+
             default:
                 return `Something's wrong, round is currently: ${round}`
         }
@@ -83,7 +89,6 @@ function Game() {
 
     return (
         <div>
-            For right now, the game will not hold your place, so don't click away after you've started!
             <br></br>
             {renderRounds()}
             <br></br>
