@@ -1,0 +1,21 @@
+.card-row {
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex: 1, 1, auto;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+.round {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
