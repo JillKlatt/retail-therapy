@@ -20,15 +20,21 @@ function Card(props) {
 
 
     return(
+
         <div >
+            {/* <div className='row'> */}
+
             <div className='card-container'>
+                <div className='column'>
                 <div className='card-content'>
                     <p>{props.choice}</p>
                 </div>
                 <div className='btn'>
                     <button onClick={renderOutcome}>{props.buttonChoice}</button>
                 </div>
+                </div>
             </div>
+
         </div>
     )
 }
