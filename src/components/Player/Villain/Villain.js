@@ -12,11 +12,13 @@ class Villain extends React.Component {
     render(){
         return(
             <div className='villain-container'>
-                <div className='villain-title'>
-                    {this.name}
-                </div>
-                <div className='villian-body'>
-                    {this.description}
+                <div className='villain-content'>
+                    <div className='villain-title'>
+                        <h3>{this.name}</h3>
+                    </div>
+                    <div className='villain-body'>
+                        <p>{this.description}</p>
+                    </div>
                 </div>
             </div>
         )
