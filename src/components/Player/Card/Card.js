@@ -7,7 +7,6 @@ import './Card.css'
 function Card(props) {
 
     const state = useSelector((state) => state)
-    const round = state.round
 
     const dispatch = useDispatch()
   
