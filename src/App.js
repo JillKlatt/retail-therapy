@@ -54,7 +54,7 @@ function App() {
       <header className="App-header">
         {displayUserInfo()}
         
-        <button onClick={addPointAC}>Add One Point for Test</button>
+        {/* <button onClick={addPointAC}>Add One Point for Test</button> */}
 
       </header>
     </div>
