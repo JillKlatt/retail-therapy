@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-// import { submitGame } from '../Actions/index'
-import Villain from '../Player/Villain/Villain'
-import Card from '../Player/Card/Card'
+
+import RoundZero from '../Rounds/RoundZero'
 import RoundOne from '../Rounds/RoundOne'
 import RoundTwo from '../Rounds/RoundTwo'
+import RoundThree from '../Rounds/RoundThree'
+import RoundFour from '../Rounds/RoundFour'
+import RoundFive from '../Rounds/RoundFive'
+import RoundSix from '../Rounds/RoundSix'
+import RoundSeven from '../Rounds/RoundSeven'
 
 
 
@@ -40,14 +44,37 @@ function Game() {
 
     function renderRounds() {
         switch(round){
-            case 0:                
+            case 0:
+                console.log(round)
+                return <RoundZero setCurrentRound={setCurrentRound}/>
+
+            case 1:                
                 console.log(round)
                 return <RoundOne setCurrentRound={setCurrentRound}/>
 
-
-            case 1:
+            case 2:
                 console.log(round)
-                return <RoundTwo />
+                return <RoundTwo setCurrentRound={setCurrentRound}/>
+
+            case 3:
+                console.log(round)
+                return <RoundThree setCurrentRound={setCurrentRound}/>
+
+            case 4:
+                console.log(round)
+                return <RoundFour setCurrentRound={setCurrentRound}/>
+
+            case 5:
+                console.log(round)
+                return <RoundFive setCurrentRound={setCurrentRound}/>
+
+            case 6:
+                console.log(round)
+                return <RoundSix setCurrentRound={setCurrentRound}/>
+            
+            case 7:
+                console.log(round)
+                return <RoundSeven setCurrentRound={setCurrentRound}/>
 
             default:
                 return `Something's wrong, round is currently: ${round}`
