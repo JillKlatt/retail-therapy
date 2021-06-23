@@ -22,9 +22,13 @@ function Card(props) {
     return(
         <div >
             <div className='card-container'>
-            {props.choice}
+                <div className='card-content'>
+                    <p>{props.choice}</p>
+                </div>
+                <div className='btn'>
+                    <button onClick={renderOutcome}>{props.buttonChoice}</button>
+                </div>
             </div>
-            <button onClick={renderOutcome}>{props.buttonChoice}</button>
         </div>
     )
 }
