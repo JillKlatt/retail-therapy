@@ -7,8 +7,7 @@ function RoundZero(props) {
 
     return (
     <div>    
-    <Villain name={"Here is where our story begins! There will be backstory and info and wooooo"}/>
-    <Card choice={"Begin Game!"} outcome={"Here We Go!"} setCurrentRound={props.setCurrentRound}/> 
+    <Card choice={"Here is where our story begins! There will be backstory and info and wooooo"} buttonChoice={"Begin Game!"} outcome={"Here We Go!"} setCurrentRound={props.setCurrentRound}/> 
     </div>
     )
 }

@@ -5,15 +5,11 @@ import Card from '../Player/Card/Card'
 
 function RoundOne(props) {
 
-    // function changeRound() {
-    //     console.log(this.props)
-    //     this.props.setRound()
-    // }setRound={changeRound}/>setRound={changeRound}
     return (
     <div>    
     <Villain name={"Villain Number One!"}/>
-    <Card choice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
-    <Card choice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
+    <Card choice={"This is too scary!"} buttonChoice={"Run Away!"} outcome={"You Ran Away!"} setCurrentRound={props.setCurrentRound}/> 
+    <Card choice={"You can take em!"} buttonChoice={"Fight!"} outcome={"Stay And Fight!"} setCurrentRound={props.setCurrentRound}/>
     </div>
     )
 }
