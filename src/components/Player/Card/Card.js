@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { changeRound } from '../../Actions/index'
+import './Card.css'
 
 function Card(props) {
 
@@ -19,8 +20,11 @@ function Card(props) {
 
 
     return(
-        <div>
-            <button onClick={renderOutcome}>{props.choice}</button>
+        <div >
+            <div className='card-container'>
+            {props.choice}
+            </div>
+            <button onClick={renderOutcome}>{props.buttonChoice}</button>
         </div>
     )
 }
