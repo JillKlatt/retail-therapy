@@ -1,28 +1,26 @@
 import React from 'react';
 import './Villain.css'
 
-class Villain extends React.Component {
+function Villain(props) {
 
-    constructor(props){
-        super(props);
-        this.name = props.name
-        this.description = props.description
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.name = props.name
+    //     this.description = props.description
+    // }
 
-    render(){
         return(
             <div className='villain-container'>
                 <div className='villain-content'>
                     <div className='villain-title'>
-                        <h3>{this.name}</h3>
+                        <h3>{props.name}</h3>
                     </div>
                     <div className='villain-body'>
-                        <p>{this.description}</p>
+                        <p>{props.description}</p>
                     </div>
                 </div>
             </div>
         )
-    }
 
 }
 
