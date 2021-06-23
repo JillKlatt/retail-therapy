@@ -1,11 +1,10 @@
-// import logo from './logo.svg';
+
 import './App.css';
-// import pageReducer from './components/reducers/pageReducer';
 import Welcome from './components/Pages/Welcome'
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { createUser, addPoint, getLeaders } from './components/Actions/index'
+import { createUser, addPoint } from './components/Actions/index'
 import Form from './components/Form'
 
 
@@ -31,23 +30,6 @@ function App() {
     return <Form createUserAC={createUserAC} setGame={setGame}/> 
   }
 
-  // function getUserInput() {
-  //         console.log(game)
-  //   switch (game){
-  //     case false:
-
-  //       return <Form createUserAC={createUserAC}/>
-  //       //After form is submitted setGame(true)
-
-
-  //     case true:
-  //       return <Welcome />
-
-  //       default:
-  //         return <Form createUserAC={createUserAC}/>
-  //   }
-  // }
-
   function displayUserInfo() {
     if (state.user.username !== ""){
     return (
@@ -60,7 +42,8 @@ function App() {
     else
       return (
         <div>
-        Enter Your Name: {getUserInput()}
+        Welcome to this game! Here's where a fun card will go!<br></br>
+        Enter Your Name To Begin: {getUserInput()}
         </div>
       )
   }
