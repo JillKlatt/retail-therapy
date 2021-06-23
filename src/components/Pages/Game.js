@@ -37,7 +37,8 @@ function Game() {
             body: JSON.stringify(state.user),
         })
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => {
+            alert(data)})
         setUser("")
     }
 
@@ -92,7 +93,7 @@ function Game() {
             <br></br>
             {renderRounds()}
             <br></br>
-            <button onClick={submitGame}> Finish Game & Submit Score!</button>
+            {/* <button onClick={submitGame}> Finish Game & Submit Score!</button> */}
         </div>
     )
 } 
