@@ -17,7 +17,11 @@ export default function manageUser(state = {
                 points: state.points + 1
             }
 
-        // case 'SUBMIT_GAME':
+        case 'RESET_POINTS':
+            return {
+                ...state,
+                points: 0
+            }
 
 
 
