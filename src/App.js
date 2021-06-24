@@ -22,19 +22,14 @@ function App() {
 
 
   const state = useSelector((state) => state)
-  //Checks state on reload
-  // console.log(state)
+
   const dispatch = useDispatch()
 
   //Create User 
   const createUserAC = bindActionCreators(createUser, dispatch)
 
-  const [game, setGame] = useState(true)
+  const [input, setInput] = useState(false)
 
-  function getUserInput() {
-    if (game)
-    return <Form createUserAC={createUserAC} setGame={setGame}/> 
-  }
 
   function displayUserInfo() {
     if (state.user.username !== ""){
@@ -52,6 +47,10 @@ function App() {
       )
   }
 
+  function getUserInput() {
+    if (!input)
+    return <Form createUserAC={createUserAC} setInput={setInput}/> 
+  }
 
   return (
     <div className="App">
