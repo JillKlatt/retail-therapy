@@ -1,11 +1,21 @@
 
 import './App.css';
-import Welcome from './components/Pages/Welcome'
+import NavBar from './components/Pages/NavBar';
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { createUser, addPoint } from './components/Actions/index'
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { createUser} from './components/Actions/index';
 import Form from './components/Form'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Leaderboard from './components/Pages/Leaderboard';
+import Game from './components/Pages/Game';
+import About from './components/Pages/About';
+import Header from './components/Pages/Header';
 
 
 function App() {
@@ -16,14 +26,10 @@ function App() {
   // console.log(state)
   const dispatch = useDispatch()
 
-  //Create User and Test Point Count
+  //Create User 
   const createUserAC = bindActionCreators(createUser, dispatch)
-  const addPointAC = bindActionCreators(addPoint, dispatch)
 
   const [game, setGame] = useState(true)
-  useEffect(() => {
-
-  })
 
   function getUserInput() {
     if (game)
@@ -34,9 +40,7 @@ function App() {
     if (state.user.username !== ""){
     return (
       <div>
-      Current User: {state.user.username} <br></br>
-      Current Points: {state.user.points}<br></br><br></br>
-      <Welcome />
+      <NavBar />
       </div>
     )}
     else
@@ -51,12 +55,26 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className='app-header'>
+      <Header />
+      </div>
+      <Router>
+      <header className="App-body">
         {displayUserInfo()}
+        <Switch>
+          <Route exact path='/game'>
+            <Game />
+          </Route>
+          <Route exact path='/leaderboard'>
+            <Leaderboard />
+          </Route>
+          <Route exact path='/about'>
+            <About/>
+          </Route>
+        </Switch>
         
-        {/* <button onClick={addPointAC}>Add One Point for Test</button> */}
-
       </header>
+      </Router>
     </div>
   );
 }
