@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import Round from '../Rounds/Round'
 import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
 import { cardArray } from '../Rounds/cardArray'
+
+import Leaderboard from '../Pages/Leaderboard'
+
+import {resetPoints, resetRound } from '../Actions/index'
 
 
 
@@ -12,13 +17,19 @@ import { cardArray } from '../Rounds/cardArray'
 
 function Game() {
 
+    const dispatch = useDispatch()
+
+    const resetRoundAC = bindActionCreators(resetRound, dispatch)
+
+    const resetPointsAC = bindActionCreators(resetPoints, dispatch)
+
     const state = useSelector((state) => state)
 
-    const round = useSelector((state) => state.round.round)
+    let round = useSelector((state) => state.round.round)
 
     const [currentRound, setCurrentRound] = useState(round)
 
-    console.log(round)
+    // console.log(round)
 
     function submitGame() {
         // debugger
@@ -31,16 +42,24 @@ function Game() {
             body: JSON.stringify(state.user),
         })
         .then(resp => resp.json())
-        .then(data => {
-            alert(data)})
-        // setUser("")
+        // .then(data => {
+        //     console.log(data)})
+        .then(data => console.log(data))
+        resetGame()
+    }
+
+    const resetGame = () => {
+        // debugger
+        resetRoundAC()
+        resetPoints()
+        return <Leaderboard />
     }
 
 
     function renderRound() {
         for (let i=round; i < 3; i++)
         return <Round villains={villainArray[i]} cards={cardArray[i]} setCurrentRound={setCurrentRound}/>
-        if (round === 4){
+        if (round === (villainArray.length)){
             return <LastRound submitGame={submitGame}/>
         }
     }
