@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { getLeaders } from '../Actions/index'
-import manageLeaders from '../Reducers/manageLeaders.js'
-import { bindActionCreators } from 'redux'
-// import { getLeaders } from './components/Actions/index'
-import { useSelector, useDispatch } from 'react-redux'
+// import { getLeaders } from '../Actions/index'
+// import manageLeaders from '../Reducers/manageLeaders.js'
+// import { bindActionCreators } from 'redux'
+// // import { getLeaders } from './components/Actions/index'
+// import { useSelector, useDispatch } from 'react-redux'
 
 function Leaderboard() {
 

@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addPoint, changeRound } from '../../Actions/index'
 import './Card.css'
 
 function Card(props) {
-
-    const state = useSelector((state) => state)
 
     const dispatch = useDispatch()
   
@@ -20,12 +18,9 @@ function Card(props) {
             if (props.answer === 'correct'){ addPointAC()}
         }
 
-
     return(
 
         <div >
-            {/* <div className='row'> */}
-
             <div className='card-container'>
                 <div className='column'>
                 <div className='card-content'>
@@ -36,7 +31,6 @@ function Card(props) {
                 </div>
                 </div>
             </div>
-
         </div>
     )
 }

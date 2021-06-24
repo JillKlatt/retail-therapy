@@ -17,8 +17,6 @@ import LastRound from '../Rounds/LastRound'
 function Game() {
 
     const state = useSelector((state) => state)
-    
-    const [user, setUser] = useState(state.user)
 
     const round = useSelector((state) => state.round.round)
 
@@ -39,16 +37,14 @@ function Game() {
         .then(resp => resp.json())
         .then(data => {
             alert(data)})
-        setUser("")
+        // setUser("")
     }
 
-    //case action statement about which round
-    //Will change round to start at one after adding a "Begin" button
 
     function renderRounds() {
         switch(round){
             case 0:
-                console.log(round)
+                console.log(currentRound)
                 return <RoundZero setCurrentRound={setCurrentRound}/>
 
             case 1:                

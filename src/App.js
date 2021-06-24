@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/Pages/NavBar';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createUser} from './components/Actions/index';
@@ -9,8 +9,7 @@ import Form from './components/Form'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Leaderboard from './components/Pages/Leaderboard';
 import Game from './components/Pages/Game';
