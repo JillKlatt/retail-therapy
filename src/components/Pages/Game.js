@@ -1,18 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 
-// Is there a way to combine all of these into one to export?
-import RoundZero from '../Rounds/RoundZero'
-import RoundOne from '../Rounds/RoundOne'
-import RoundTwo from '../Rounds/RoundTwo'
-import RoundThree from '../Rounds/RoundThree'
-import RoundFour from '../Rounds/RoundFour'
-import RoundFive from '../Rounds/RoundFive'
-import RoundSix from '../Rounds/RoundSix'
-import RoundSeven from '../Rounds/RoundSeven'
-import LastRound from '../Rounds/LastRound'
-
 import Round from '../Rounds/Round'
+import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
 import { cardArray } from '../Rounds/cardArray'
 
@@ -50,49 +40,8 @@ function Game() {
     function renderRound() {
         for (let i=round; i < 3; i++)
         return <Round villains={villainArray[i]} cards={cardArray[i]} setCurrentRound={setCurrentRound}/>
-    }
-
-    // Not dry-- Need to fix 6/24
-    function renderRounds() {
-        switch(round){
-            case 0:
-                console.log(currentRound)
-                return <RoundZero setCurrentRound={setCurrentRound}/>
-
-            case 1:                
-                console.log(round)
-                return <RoundOne setCurrentRound={setCurrentRound}/>
-
-            case 2:
-                console.log(round)
-                return <RoundTwo setCurrentRound={setCurrentRound}/>
-
-            case 3:
-                console.log(round)
-                return <RoundThree setCurrentRound={setCurrentRound}/>
-
-            case 4:
-                console.log(round)
-                return <RoundFour setCurrentRound={setCurrentRound}/>
-
-            case 5:
-                console.log(round)
-                return <RoundFive setCurrentRound={setCurrentRound}/>
-
-            case 6:
-                console.log(round)
-                return <RoundSix setCurrentRound={setCurrentRound}/>
-            
-            case 7:
-                console.log(round)
-                return <RoundSeven setCurrentRound={setCurrentRound}/>
-
-            case 8:
-                console.log(round)
-                return <LastRound submitGame={submitGame}/>
-
-            default:
-                return `Something's wrong, round is currently: ${round}`
+        if (round === 4){
+            return <LastRound submitGame={submitGame}/>
         }
     }
 
