@@ -12,6 +12,12 @@ import RoundSix from '../Rounds/RoundSix'
 import RoundSeven from '../Rounds/RoundSeven'
 import LastRound from '../Rounds/LastRound'
 
+import Round from '../Rounds/Round'
+import { villainArray } from '../Rounds/villainArray'
+import { cardArray } from '../Rounds/cardArray'
+
+
+
 
 
 function Game() {
@@ -41,6 +47,12 @@ function Game() {
     }
 
 
+    function renderRound() {
+        for (let i=round; i < 3; i++)
+        return <Round villains={villainArray[i]} cards={cardArray[i]} setCurrentRound={setCurrentRound}/>
+    }
+
+    // Not dry-- Need to fix 6/24
     function renderRounds() {
         switch(round){
             case 0:
@@ -87,7 +99,7 @@ function Game() {
     return (
         <div>
             <br></br>
-            {renderRounds()}
+            {renderRound()}
             <br></br>
             {/* <button onClick={submitGame}> Finish Game & Submit Score!</button> */}
         </div>
