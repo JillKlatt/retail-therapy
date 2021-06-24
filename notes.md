@@ -53,6 +53,7 @@ jQuery methods.
 ## 6/25
 [ ] Add story
 [ ] Add styling
+	[ ] Modals instead of alerts!
 [ ] Blog post
 
 

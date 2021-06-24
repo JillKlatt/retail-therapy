@@ -51,7 +51,7 @@ function Game() {
     const resetGame = () => {
         // debugger
         resetRoundAC()
-        resetPoints()
+        resetPointsAC()
         return <Leaderboard />
     }
 

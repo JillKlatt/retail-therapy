@@ -13,7 +13,7 @@ function Card(props) {
     const addPointAC = bindActionCreators(addPoint, dispatch)
 
     const renderOutcome = () => {
-        alert(props.outcome)
+        //alert(props.outcome)
         changeRoundAC()
             if (props.answer === 'correct'){ addPointAC()}
         }
