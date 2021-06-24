@@ -39,8 +39,8 @@ jQuery methods.
 
 
 ## 6/24
-[ ] Fix the rounds issue
-[ ] Add story
+[X] Fix the rounds issue
+
 [X] Fix routes
 [ ] Render leaders to store so they don't have to re render each time?
 [ ] Add Game Over end card, option to play again?
@@ -51,6 +51,11 @@ jQuery methods.
 [ ] Maybe store villian and card info on backend and just render on display in rounds?
 
 ## 6/25
+[ ] Add story
 [ ] Add styling
 [ ] Blog post
+
+
+## BONUS:
+[ ] Add ChangeUsername option on the bottom
 

@@ -19,6 +19,20 @@ export const changeRound = (round) => {
     }
 }
 
+export const resetRound = (round) => {
+    return {
+        type: "RESET_ROUND",
+        payload: round
+    }
+}
+
+export const resetPoints = (points) => {
+    return{
+        type: 'RESET_POINTS',
+        payload: points
+    }
+}
+
 export const submitGame = (user) => {
     return (dispatch) => {
     fetch("http:///127.0.0.1:3001/users", {
