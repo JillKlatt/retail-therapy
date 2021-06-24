@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 function UsernameInput(props) {
 
     const [username, setUsername] = useState("")
-    const [didUserInput, setDidUserInput] = useState(null)
 
     const onChange = e => {
         setUsername(e.target.value)
@@ -13,17 +12,8 @@ function UsernameInput(props) {
         e.preventDefault()
         props.createUserAC(username)
         setUsername("")
-        props.setGame(false)
+        props.setInput(true)
     }
-
-
-    useEffect(() => {
-        function toggleUserInput(status) {
-            setDidUserInput(status.didUserInput)
-        }
-    }
-    )
-
 
 
     return (
