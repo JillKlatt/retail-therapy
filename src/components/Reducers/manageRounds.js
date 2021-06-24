@@ -6,6 +6,12 @@ export default function manageRounds(state = {round: 0}, action){
                     ...state,
                     round: state.round + 1
                 }
+        
+        case 'RESET_ROUND':
+            return {
+                ...state,
+                round: 0
+            }
 
         default:
             return state
