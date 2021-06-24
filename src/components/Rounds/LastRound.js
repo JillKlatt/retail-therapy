@@ -1,6 +1,6 @@
 import Villain from '../Player/Villain/Villain'
 
-function RoundZero(props) {
+function LastRound(props) {
 
     function finishGame() {
         props.submitGame()
@@ -8,10 +8,10 @@ function RoundZero(props) {
 
     return (
     <div>    
-    <Villain name={"Here is where our story begins! There will be backstory and info and wooooo"}/>
+    <Villain name={props.villains.name} description={props.villains.description}/>
     <button onClick={finishGame}> The Game is Over! Click here to submit your score!</button>
     </div>
     )
 }
 
-export default RoundZero
+export default LastRound
