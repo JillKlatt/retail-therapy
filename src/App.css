@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #acb6c9;
   min-height: 100vh;
   display: flex;
@@ -39,4 +39,9 @@
 }
 span.navigationSpace {
   padding-left: 50px;
+}
+
+.app-header {
+  overflow: hidden;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
