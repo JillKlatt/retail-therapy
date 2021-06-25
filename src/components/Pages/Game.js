@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Round from '../Rounds/Round'
+import RoundZero from '../Rounds/RoundZero'
 import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
-import { cardArray } from '../Rounds/cardArray'
+import { rightCardArray, leftCardArray } from '../Rounds/cardArray'
 
 import {resetPoints, resetRound, addLeader } from '../Actions/index'
 
@@ -52,9 +53,12 @@ function Game() {
 
 
     function renderRound() {
-        for (let i=round; i < 3; i++)
-        return <Round villains={villainArray[i]} cards={cardArray[i]} setCurrentRound={setCurrentRound}/>
-        if (round === (villainArray.length)){
+        if (round === 0){
+            return <RoundZero setCurrentRound={setCurrentRound}/>
+        }
+        for (let i= (round - 1); i < 3; i++)
+        return <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} setCurrentRound={setCurrentRound}/>
+        if (round === (villainArray.length + 1)){
             return <LastRound submitGame={submitGame}/>
         }
     }
