@@ -1,14 +1,14 @@
 
 import './App.css';
 import NavBar from './components/Pages/NavBar';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createUser, getLeaders} from './components/Actions/index';
-import Form from './components/Form'
 import {
   BrowserRouter as Router,
   Switch,
+  Redirect,
   Route
 } from "react-router-dom";
 import Leaderboard from './components/Pages/Leaderboard';
@@ -32,12 +32,6 @@ function App() {
     getLeadersAC()}, []
 )
 
-  //Create User 
-  const createUserAC = bindActionCreators(createUser, dispatch)
-
-  // const [input, setInput] = useState(false)
-
-
   function displayUserInfo() {
     if (state.user.username !== ""){
     return (
@@ -53,10 +47,6 @@ function App() {
       )
   }
 
-  // function getUserInput() {
-  //   if (!input)
-  //   return <Form createUserAC={createUserAC} setInput={setInput}/> 
-  // }
 
   return (
     <div className="App">
@@ -75,6 +65,9 @@ function App() {
           </Route>
           <Route exact path='/about'>
             <About/>
+          </Route>
+          <Route exact path='/'>
+            <Redirect to='/about'/>
           </Route>
         </Switch>
         
