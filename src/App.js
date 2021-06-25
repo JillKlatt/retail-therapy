@@ -15,6 +15,7 @@ import Leaderboard from './components/Pages/Leaderboard';
 import Game from './components/Pages/Game';
 import About from './components/Pages/About';
 import Header from './components/Pages/Header';
+import Welcome from './components/Pages/Welcome'
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
   //Create User 
   const createUserAC = bindActionCreators(createUser, dispatch)
 
-  const [input, setInput] = useState(false)
+  // const [input, setInput] = useState(false)
 
 
   function displayUserInfo() {
@@ -46,25 +47,24 @@ function App() {
     )}
     else
       return (
-        <div>
-        Welcome to this game! Here's where a fun card will go!<br></br>
-        Enter Your Name To Begin: {getUserInput()}
+        <div className='app-body'>
+       <Welcome />
         </div>
       )
   }
 
-  function getUserInput() {
-    if (!input)
-    return <Form createUserAC={createUserAC} setInput={setInput}/> 
-  }
+  // function getUserInput() {
+  //   if (!input)
+  //   return <Form createUserAC={createUserAC} setInput={setInput}/> 
+  // }
 
   return (
     <div className="App">
-      <div className='app-header'>
+      <div className='App-header'>
       <Header />
       </div>
       <Router>
-      <header className="App-body">
+      <header className="app-body">
         {displayUserInfo()}
         <Switch>
           <Route exact path='/game'>
