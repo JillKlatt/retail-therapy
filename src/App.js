@@ -1,10 +1,10 @@
 
 import './App.css';
 import NavBar from './components/Pages/NavBar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { createUser} from './components/Actions/index';
+import { createUser, getLeaders} from './components/Actions/index';
 import Form from './components/Form'
 import {
   BrowserRouter as Router,
@@ -23,6 +23,13 @@ function App() {
   const state = useSelector((state) => state)
 
   const dispatch = useDispatch()
+
+  //Get Leaders
+  const getLeadersAC = bindActionCreators(getLeaders, dispatch)
+
+  useEffect(() => {
+    getLeadersAC()}, []
+)
 
   //Create User 
   const createUserAC = bindActionCreators(createUser, dispatch)
@@ -64,7 +71,7 @@ function App() {
             <Game />
           </Route>
           <Route exact path='/leaderboard'>
-            <Leaderboard />
+            <Leaderboard/>
           </Route>
           <Route exact path='/about'>
             <About/>
