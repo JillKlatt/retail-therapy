@@ -42,15 +42,18 @@ jQuery methods.
 [X] Fix the rounds issue
 
 [X] Fix routes
-[ ] Render leaders to store so they don't have to re render each time?
-[ ] Add Game Over end card, option to play again?
-	[ ] Change setUser after ending
+[X] Render leaders to store so they don't have to re render each time?
+[X] Add Game Over end card, option to play again?
+	[X] Reset rounds on game completion
+	[X] Reset points on game completion
 [X] Remove uneccessary imports
-[ ] On refresh, set route back to '/'
+[ ] On refresh, set route back to '/' - Protect Routes
+[X] Add Second Card Component for easy rendering
 
 [ ] Maybe store villian and card info on backend and just render on display in rounds?
 
 ## 6/25
+[ ] Protect routes
 [ ] Add story
 [ ] Add styling
 	[ ] Modals instead of alerts!
