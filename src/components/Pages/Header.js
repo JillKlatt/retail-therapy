@@ -6,7 +6,9 @@ function Header() {
 
     return (
         <div>
-            Retail Therapy!
+            <div className='top-header'>
+            Retail Therapy
+            </div>
         </div>
 
     )
