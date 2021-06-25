@@ -19,7 +19,7 @@ function UsernameInput(props) {
     return (
         <div>
             <input name="username" value={username} onChange={onChange}/>
-            <input onClick={handleSubmit} type="submit" value="Submit"/>
+            <input onClick={handleSubmit} type="submit" value="Send to HR"/>
         </div>
     )
 
