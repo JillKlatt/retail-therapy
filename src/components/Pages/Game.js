@@ -7,8 +7,6 @@ import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
 import { cardArray } from '../Rounds/cardArray'
 
-import Leaderboard from '../Pages/Leaderboard'
-
 import {resetPoints, resetRound } from '../Actions/index'
 
 
@@ -29,8 +27,6 @@ function Game() {
 
     const [currentRound, setCurrentRound] = useState(round)
 
-    // console.log(round)
-
     function submitGame() {
         // debugger
         fetch("http:///127.0.0.1:3001/users", {
@@ -42,17 +38,13 @@ function Game() {
             body: JSON.stringify(state.user),
         })
         .then(resp => resp.json())
-        // .then(data => {
-        //     console.log(data)})
         .then(data => console.log(data))
         resetGame()
     }
 
     const resetGame = () => {
-        // debugger
         resetRoundAC()
         resetPointsAC()
-        return <Leaderboard />
     }
 
 
