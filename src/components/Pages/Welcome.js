@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { createUser, getLeaders} from '../Actions/index';
 import Form from '../Form'
 
-function Welcome(props) {
+function Welcome() {
 
     const dispatch = useDispatch()
     const createUserAC = bindActionCreators(createUser, dispatch)
@@ -18,8 +18,9 @@ function Welcome(props) {
 
     return (
         <div>
-        Welcome to this game! Here's where a fun card will go!<br></br>
-        Enter Your Name To Begin: {getUserInput()}
+            <h2>Welcome to your first day at this Unnamed Discount Grocery Store!</h2>
+        <p>We're happy to have you aboard our team, remind us of your name?</p>
+        {getUserInput()}
         </div>
     )
 } 
