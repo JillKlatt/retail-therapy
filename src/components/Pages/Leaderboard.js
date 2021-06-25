@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 
-function Leaderboard(props) {
+function Leaderboard() {
 
-    // useEffect(() => {
-    //     props.getLeaders()}, []
-    // )
 
     let leaders = useSelector((state) => state.leaders.leaders)
     console.log(`Leaders: ${leaders}`)
 
     function renderLeaders(){
+
+        // Need to sort leaders here to correctly render new users upon post
+        const sortedLeaders = leaders.sort((a, b) => (a.points < b.points) ? 1 : -1)
       
-        return (leaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
+        return (sortedLeaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
        )
     }
 
@@ -32,9 +32,10 @@ export default Leaderboard;
 
     // ## Currently storing leaders in store, can store locally: 
 
-    // function renderLeaders() {
-    //     props.getLeaders()}
-    // }
+        // useEffect(() => {
+    //     props.getLeaders()}, []
+    // )
+
     // const [leaders, setLeaders] = useState([])
 
     // useEffect(() => {
