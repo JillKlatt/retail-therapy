@@ -47,7 +47,7 @@ function Game() {
     const resetGame = () => {
         resetRoundAC()
         resetPointsAC()
-        addLeaderAC()
+        addLeaderAC(state.user)
     }
 
 
