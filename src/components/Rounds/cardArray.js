@@ -1,14 +1,14 @@
 export const rightCardArray = [
     {
-        answer: "incorrect",
-        choice: "Let's Fucking Go Bro!",
-        buttonChoice: "Start Game",
-        outcome: "Here We Go!"
+        answer:"incorrect", 
+        choice: "Ignore Her", 
+        buttonChoice: "Go check the cabinets", 
+        outcome: "You Ran Away!"
     },
     {
         answer:"incorrect", 
-        choice: "Wrong Answer: Test One", 
-        buttonChoice: "Run Away!", 
+        choice: "Ignore Her", 
+        buttonChoice: "Go check the cabinets", 
         outcome: "You Ran Away!"
     },
     {
@@ -22,8 +22,8 @@ export const rightCardArray = [
 export const leftCardArray = [
     {
         answer: "correct",
-        choice: "Let's Fucking Go Bro!",
-        buttonChoice: "Start Game",
+        choice: "Ask About Her Cats!",
+        buttonChoice: "Look at her phone",
         outcome: "Here We Go!"
     },
     {
