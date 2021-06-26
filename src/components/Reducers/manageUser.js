@@ -4,14 +4,12 @@ export default function manageUser(state = {
 }, action) {
     switch (action.type){
         case 'ADD_USER':
-            // console.log(action.payload)
             return {
                 ...state,
                 username: action.payload
             }
 
         case 'ADD_POINT':
-            // debugger
             return {
                 ...state,
                 points: state.points + 1
@@ -22,8 +20,6 @@ export default function manageUser(state = {
                 ...state,
                 points: 0
             }
-
-
 
         default:
             return state; 
