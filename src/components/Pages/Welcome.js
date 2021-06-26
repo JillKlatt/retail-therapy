@@ -20,6 +20,7 @@ function Welcome() {
         <div>
             <h2>Welcome to your first day at this Unnamed Discount Grocery Store!</h2>
         <p>We're happy to have you aboard our team, remind us of your name?</p>
+        <br />
         {getUserInput()}
         </div>
     )
