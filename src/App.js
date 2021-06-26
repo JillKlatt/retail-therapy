@@ -4,7 +4,7 @@ import NavBar from './components/Pages/NavBar';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { createUser, getLeaders} from './components/Actions/index';
+import { getLeaders} from './components/Actions/index';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +19,6 @@ import Welcome from './components/Pages/Welcome'
 
 
 function App() {
-
 
   const state = useSelector((state) => state)
 
