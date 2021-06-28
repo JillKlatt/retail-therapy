@@ -1,71 +1,33 @@
-# Getting Started with Create React App
+Jill Klatt Flatiron Phase 5 REACT/REDUX Project
+# Retail Therapy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## An interactive story of one hourly assistant manager's journey to rescue their manager from the evil DM!
 
-## Available Scripts
+### Install Instructions:
+Fork and clone this repo
+<br />
+Navigate to back-end
+<br />
+Run ```bundle install``` to install necessary gems
+<br />
+Run ```rails db:migrate``` to create your backend tables
+<br />
+Run ```rails db:seed``` to create Leaderboard seeds
+<br />
+Run ```rails s``` to launch the backend API server
+<br />
+Create a second terminal and navigate to front-end
+<br />
+Run ```yarn start``` which will launch the program and open it in your browser
 
-In the project directory, you can run:
+### Sample Demo Video:
+A brief description of this program's capabilities is available [here](https://www.youtube.com/watch?v=wp_YVFNdPhA&ab_channel=JillKlatt)
 
-### `yarn start`
+### Contributor Guide
+Bug reports and inquiries are welcome at: https://github.com/JillKlatt/retail-therapy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Code of Conduct
+[CODE-OF-CONDUCT](https://github.com/JillKlatt/retail-therapy/blob/main/CODE-OF-CONDUCT.md)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# retail-therapy
+### License information
+[MIT LICENSE](https://github.com/JillKlatt/retail-therapy/blob/main/LICENSE)

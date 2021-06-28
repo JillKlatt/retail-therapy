@@ -57,9 +57,14 @@ jQuery methods.
 [ ] Add story
 [ ] Add styling
 	[ ] Modals instead of alerts!
-[ ] Blog post
+[X] Blog post
 
 
 ## BONUS:
 [ ] Add ChangeUsername option on the bottom
+
+## 6/28
+[X] Readme
+[ ] Add Story
+[ ] Add seed data
 
