@@ -48,7 +48,7 @@ function App() {
 
 
   return (
-    <div style={{backgroundImage: "url(/supermarketcart_maincropped.jpg)"}}>
+    <div style={{backgroundImage: "url(/supermarketcart_maincropped2.jpg)"}}>
     <div className="App" >
       <div className='App-header'>
       <Header />
