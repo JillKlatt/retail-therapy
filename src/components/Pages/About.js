@@ -6,7 +6,7 @@ function About() {
     return (
         <div>
             <div className="about-header">
-            <h3>Welcome to Retail Therapy, the interactive adventure! </h3>
+            <h3>Welcome to Retail Therapy, an interactive adventure! </h3>
             </div>
             <div className='about-body'>
             <p>For those brave enough to accept the challenge and horrible wages, </p>
