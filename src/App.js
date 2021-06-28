@@ -48,7 +48,8 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div style={{backgroundImage: "url(/supermarketcart_maincropped.jpg)"}}>
+    <div className="App" >
       <div className='App-header'>
       <Header />
       </div>
@@ -72,6 +73,7 @@ function App() {
         
       </header>
       </Router>
+    </div>
     </div>
   );
 }
