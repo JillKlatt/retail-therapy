@@ -10796,7 +10796,15 @@ style-loader@1.3.0:
     loader-utils "^2.0.0"
     schema-utils "^2.7.0"
 
-styled-components@^5.3.0:
+styled-base-components@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-base-components/-/styled-base-components-4.0.0.tgz#a5f0e1c4b2558926793aa59a4ff60616a1198e65"
+  integrity sha512-1Ikyk279YnwyKnh5+Vlb6q1qfXZ+43xzAqMc4iB+LN7uM/ePJXlGME6gUw2P6DNq9lxRmQrYaWdKsfoiUN3oSQ==
+  dependencies:
+    styled-base-components "^4.0.0"
+    styled-config "^4.0.0"
+
+styled-components@^5, styled-components@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.0.tgz#e47c3d3e9ddfff539f118a3dd0fd4f8f4fb25727"
   integrity sha512-bPJKwZCHjJPf/hwTJl6TbkSZg/3evha+XPEizrZUGb535jLImwDUdjTNxXqjjaASt2M4qO4AVfoHJNe3XB/tpQ==
@@ -10811,6 +10819,28 @@ styled-components@^5.3.0:
     hoist-non-react-statics "^3.0.0"
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
+
+styled-config@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-config/-/styled-config-4.0.0.tgz#42530f37d1a33205a28a1cc058020aca4c5f131b"
+  integrity sha512-sQq5C1t5KtN0iMpF7lAuzh3fSpk8T0vFIh8XH7l+pOzD+w9+Wow6OPcgnZ+Q/ay6jtyhgUk6E8jMopv+dmUsVw==
+
+styled-nav-component@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-nav-component/-/styled-nav-component-4.0.0.tgz#a0afb7f53ee43f5e2243eaed5f83eafcb8d26944"
+  integrity sha512-C5ny0GV/2O30U+3FbHde/eEHsLg6GqiUJFvN+6EjxWkhYBGPpBIkavisvlh28+fIMFBC1/7dsSkUfkrySt/vhA==
+  dependencies:
+    styled-base-components "^4.0.0"
+    styled-config "^4.0.0"
+
+styled-navbar-component@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-navbar-component/-/styled-navbar-component-4.0.0.tgz#43e71801c28c377bc7973733b3d152f600d12e4e"
+  integrity sha512-oT2/7OZLma2CAMJQeBKIidTLR/EKRklWZbI6UE7CRDwVPTVLyLUlZsYzl78wZ7bB2NPfcObXh9Y1Bj9cYD9+SQ==
+  dependencies:
+    styled-base-components "^4.0.0"
+    styled-config "^4.0.0"
+    styled-nav-component "^4.0.0"
 
 stylehacks@^4.0.0:
   version "4.0.3"
