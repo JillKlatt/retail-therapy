@@ -3,22 +3,28 @@ import { Link } from "react-router-dom";
 
 import ScoreCard from './ScoreCard'
 import './Page.css'
+import { Navbar, NavbarLink } from 'styled-navbar-component';
+import { Nav } from 'styled-nav-component';
 
 function NavBar(){
 
     return(
         <div>
-        <div id='nav-bar' className='navbar'>
+        <Navbar expandSm light>
+            <Nav start>
+        {/* <div id='nav-bar' className='navbar'> */}
             <Link to='/game'>
-                <h2 id='game'>Let's Play</h2>
+                <NavbarLink light brand id='game'>Let's Play</NavbarLink>
             </Link>
             <Link to='/leaderboard'>
-                <h2 id='leaderboard'>Leaderboard</h2>
+                <NavbarLink light brand id='leaderboard'>Leaderboard</NavbarLink>
             </Link>
             <Link to='/about'>
-                <h2 id='about'>About</h2>
+                <NavbarLink light brand id='about'>About</NavbarLink>
             </Link>
-        </div>
+            </Nav>
+        {/* </div> */}        
+        </Navbar>
             <ScoreCard />
         </div>
     )
