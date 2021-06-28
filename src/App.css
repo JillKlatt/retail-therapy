@@ -13,8 +13,9 @@
   }
 }
 
+
 .App-body {
-  background-color: #acb6c9;
+  /* background-color: #acb6c9; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,3 +46,11 @@ span.navigationSpace {
   overflow: hidden;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+input{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color:burlywood;
+}
+
+
+
