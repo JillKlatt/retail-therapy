@@ -62,9 +62,12 @@ jQuery methods.
 
 ## BONUS:
 [ ] Add ChangeUsername option on the bottom
+[ ] Add health option (similar to points, but instead of adding points, encounters would detract from health)
 
 ## 6/28
 [X] Readme
+[ ] Add Modal
 [ ] Add Story
 [ ] Add seed data
+[ ] Play again? option
 
