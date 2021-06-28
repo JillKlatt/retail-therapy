@@ -5,7 +5,7 @@ function ScoreCard() {
     const state = useSelector((state) => state)
 
     function renderUser() {
-        return `Current User: ${state.user.username}`
+        return `Employee Name: ${state.user.username}`
     }
 
     function renderPoints() {
