@@ -62,7 +62,7 @@ function Game() {
         if (round === 0){
             return <RoundZero setCurrentRound={setCurrentRound}/>
         }
-        for (let i= (round - 1); i <= villainArray.length; i++)
+        for (let i= (round - 1); i < villainArray.length; i++)
             return (
             <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} openModal={openModal} setCurrentRound={setCurrentRound}/>
         )
