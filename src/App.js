@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/Pages/NavBar';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getLeaders} from './components/Actions/index';
@@ -22,6 +22,8 @@ function App() {
 
   const state = useSelector((state) => state)
 
+  const [didInput, setDidInput] = useState(true)
+
   const dispatch = useDispatch()
 
   //Get Leaders
@@ -31,6 +33,7 @@ function App() {
     getLeadersAC()}, []
 )
 
+// Doesn't display Navbar unless you're signed in
   function displayUserInfo() {
     if (state.user.username !== ""){
     return (
@@ -42,8 +45,30 @@ function App() {
       return (
         <div className='app-body'>
        <Welcome />
+
         </div>
       )
+  }
+
+  // Protects routes from being accessed if you're not signed in
+  function playerSignedIn() {
+    if (state.user.username !== ""){
+    return (
+      <Switch>
+      <Route exact path='/game'>
+        <Game />
+      </Route>
+      <Route exact path='/leaderboard'>
+        <Leaderboard/>
+      </Route>
+      <Route exact path='/about'>
+        <About/>
+      </Route>
+      <Route exact path='/'>
+        <Redirect to='/about'/>
+      </Route>
+    </Switch>
+    )}
   }
 
 
@@ -56,21 +81,7 @@ function App() {
       <Router>
       <body className="app-body">
         {displayUserInfo()}
-        <Switch>
-          <Route exact path='/game'>
-            <Game />
-          </Route>
-          <Route exact path='/leaderboard'>
-            <Leaderboard/>
-          </Route>
-          <Route exact path='/about'>
-            <About/>
-          </Route>
-          <Route exact path='/'>
-            <Redirect to='/about'/>
-          </Route>
-        </Switch>
-        
+        {playerSignedIn()}
       </body>
       </Router>
     </div>

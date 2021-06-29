@@ -71,9 +71,10 @@ jQuery methods.
 [ ] Add seed data
 [ ] Play again? option
 
-## 6/29
+## TO DO
 [ ] Add Story
 [ ] Fix Router
 [X] Add health points
 [ ] Add play again
 [ ] Add seed data
+[ ] 

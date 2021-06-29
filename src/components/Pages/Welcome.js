@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { createUser, getLeaders} from '../Actions/index';
 import Form from '../Form'
 
-function Welcome() {
+function Welcome(props) {
 
     const dispatch = useDispatch()
     const createUserAC = bindActionCreators(createUser, dispatch)
@@ -12,6 +12,7 @@ function Welcome() {
     const [input, setInput] = useState(false)
 
     function getUserInput() {
+
         if (!input)
         return <Form createUserAC={createUserAC} setInput={setInput}/> 
     }
