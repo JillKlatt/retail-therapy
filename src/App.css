@@ -48,6 +48,7 @@ span.navigationSpace {
 }
 
 input{
+  font-size: larger;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   background-color:burlywood;
 }
