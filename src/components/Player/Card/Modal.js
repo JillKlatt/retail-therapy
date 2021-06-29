@@ -14,13 +14,13 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 700px;
-  height: 255px;
+  width: 1500px;
+  height: 500px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: lightslategrey;
   color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 2fr; */
   position: relative;
   z-index: 10;
   border-radius: 10px;
@@ -34,15 +34,16 @@ const ModalWrapper = styled.div`
 // `;
 
 const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display:flex; */
+  padding-left: 10rem;
+  padding-right: 10rem;
   justify-content: center;
   align-items: center;
   line-height: 1.8;
   color: #141414;
-  p {
+  /* p {
     margin-bottom: 1rem;
-  }
+  } */
   button {
     padding: 10px 24px;
     background: #141414;
@@ -105,7 +106,7 @@ export const Modal = ({ showModal, setShowModal, outcome }) => {
             <ModalWrapper showModal={showModal}>
               {/* <ModalImg src={require('./modal.jpg')} alt='camera' /> */}
               <ModalContent>
-                <h1>{outcome}</h1>
+                <h4>{outcome}</h4>
               </ModalContent>
               <CloseModalButton
                 aria-label='Close modal'

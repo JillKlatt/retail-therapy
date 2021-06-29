@@ -25,6 +25,20 @@ h2,p{
     /* Resetting default value */
     margin: 0;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h4 {
+    margin: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+    color:rgb(141, 27, 132);
+
 }
 
 .card-title{
