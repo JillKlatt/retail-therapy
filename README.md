@@ -6,26 +6,30 @@ Jill Klatt Flatiron Phase 5 REACT/REDUX Project
 ### Install Instructions:
 Fork and clone this repo and the backend repo found [here](https://github.com/JillKlatt/retail-therapy-api)
 <br />
-#### In the API terminal:
+
+### In the API terminal:
+Run:
 <br />
-Run ```bundle install``` to install necessary gems
+```bundle install``` to install necessary gems
 <br />
-Run ```rails db:migrate``` to create your backend tables
+```rails db:migrate``` to create your backend tables
 <br />
-Run ```rails db:seed``` to create Leaderboard seeds
+```rails db:seed``` to create Leaderboard seeds
 <br />
-Run ```rails s``` to launch the backend API server
+```rails s``` to launch the backend API server
 <br />
-#### In the React terminal:
+
+### In the React terminal:
+Run:
 <br />
-Run ```npm install --global yarn``` to install yarn locally
+```npm install yarn``` to install yarn locally
 <br />
-Run ```yarn install``` to install the project dependencies
+```yarn install``` to install the project dependencies
 <br />
-Run ```yarn start``` which will launch the program and open it in your browser
+```yarn start``` which will launch the program and open it in your browser
 
 ### Sample Demo Video:
-A brief description of this program's capabilities is available [here](https://www.youtube.com/watch?v=wp_YVFNdPhA&ab_channel=JillKlatt)
+A brief description of this program's capabilities is available [here](https://www.loom.com/share/7e18f782c6564cb6984da30bf3e7c9cd)
 
 ### Contributor Guide
 Bug reports and inquiries are welcome at: https://github.com/JillKlatt/retail-therapy

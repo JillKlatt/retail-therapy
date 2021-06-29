@@ -35,6 +35,16 @@
 
   } */
 
+  .about-body{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+   justify-content: center;
+   -webkit-text-stroke: 1px black;
+   -webkit-text-fill-color: white;
+   font-weight: bold;
+  }
+
   .top-header{
     color: white;
     background-color:darkblue;
@@ -52,8 +62,8 @@
     display:block;
     content: '';
     border: 10px solid orange;
-    height: 21%;
-    width: 98.1%;
+    height: 19.5%;
+    width: 98.4%;
     box-sizing: border-box;
   }
 
@@ -82,8 +92,13 @@
   font-size: 35px;
   }
 
-  .points-badge{
+  .points-badge span{
     font-size: 30px;
+    width: 20px;
+  }
+
+  span {
+    width: 50px;
   }
   /*
   .name-badge-title {
