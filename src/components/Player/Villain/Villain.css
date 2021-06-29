@@ -10,7 +10,8 @@
 .villain-content{
     margin: 5rem;
     margin-top: 0.5rem;
-
+    color: rgb(91, 91, 180);
+    /* outline: red; */
 }
 
 h3,p{
