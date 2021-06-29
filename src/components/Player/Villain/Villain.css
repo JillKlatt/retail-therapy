@@ -8,10 +8,11 @@
 }
 
 .villain-content{
-    margin: 5rem;
+    margin: 2rem;
     margin-top: 0.5rem;
     color: rgb(91, 91, 180);
     /* outline: red; */
+    font-size: 30px;
 }
 
 h3,p{
@@ -21,7 +22,7 @@ h3,p{
 }
 
 .villain-title{
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 
 }
 

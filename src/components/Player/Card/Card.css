@@ -16,9 +16,9 @@
 }
 
 .card-content{
-    margin: 2rem;
+    margin: 0rem;
     margin-top: 0.5rem;
-
+    font-size: 30px;
 }
 
 h2,p{
