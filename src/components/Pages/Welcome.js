@@ -14,7 +14,7 @@ function Welcome() {
     function getUserInput() {
         if (!input)
         return <Form createUserAC={createUserAC} setInput={setInput}/> 
-      }
+    }
 
     return (
         <div>

@@ -41,8 +41,7 @@ function ScoreCard() {
                 {renderUser()}
             </div>
             <div className='points-badge'>
-                {renderPoints()}
-                {renderHealth()}
+                <span>{renderPoints()}</span><span>{renderHealth()}</span>
             </div>
         </div>
     )

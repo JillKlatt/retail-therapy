@@ -74,6 +74,6 @@ jQuery methods.
 ## 6/29
 [ ] Add Story
 [ ] Fix Router
-[ ] Add health points
+[X] Add health points
 [ ] Add play again
 [ ] Add seed data
