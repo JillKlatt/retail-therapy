@@ -48,10 +48,7 @@ function App() {
 
 
   return (
-    <div style={{
-      backgroundImage: "url(/supermarketcart_maincropped.jpg)" position: fixed
-      
-      }}>
+    <div className='container'>
     <div className="App" >
       <header className='App-header'>
       <Header />
