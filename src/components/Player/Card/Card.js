@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addPoint, changeRound } from '../../Actions/index'
+import { Modal } from './Modal';
 import './Card.css'
 
+// const Button = styled.button`
+//   min-width: 100px;
+//   padding: 16px 32px;
+//   border-radius: 4px;
+//   border: none;
+//   background: #141414;
+//   color: #fff;
+//   font-size: 24px;
+//   cursor: pointer;
+// `
+
 function Card(props) {
+    const [showModal, setShowModal] = useState(false)
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    }
 
     const dispatch = useDispatch()
   
@@ -14,6 +31,7 @@ function Card(props) {
 
     const renderOutcome = () => {
         //alert(props.outcome)
+        openModal()
         changeRoundAC()
             if (props.answer === 'correct'){ addPointAC()}
         }
@@ -21,6 +39,7 @@ function Card(props) {
     return(
 
         <div >
+            <Modal outcome={props.outcome} showModal={showModal} setShowModal={setShowModal} /> 
             <div className='card-container'>
                 <div className='column'>
                 <div className='card-content'>
