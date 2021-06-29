@@ -10,7 +10,13 @@ function ScoreCard() {
 
     function renderPoints() {
         if (state.user.points > 0){
-        return `Current Points: ${state.user.points}`
+        return `Points: ${state.user.points}`
+        }
+    }
+
+    function renderHealth() {
+        if (state.round.round > 0){
+        return `Health: ${state.user.health}`
         }
     }
 
@@ -34,8 +40,9 @@ function ScoreCard() {
             <div className='name-badge'>
                 {renderUser()}
             </div>
-            <div>
+            <div className='points-badge'>
                 {renderPoints()}
+                {renderHealth()}
             </div>
         </div>
     )
