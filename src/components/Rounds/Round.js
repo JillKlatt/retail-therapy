@@ -15,8 +15,8 @@ function Round(props) {
 
         </div>
         <div className='card-row'>
-            <Card openModal={props.openModal} answer={props.rightCard.answer} choice={props.rightCard.choice} buttonChoice={props.rightCard.buttonChoice} outcome={props.rightCard.outcome} />
-            <Card openModal={props.openModal} answer={props.leftCard.answer} choice={props.leftCard.choice} buttonChoice={props.leftCard.buttonChoice} outcome={props.leftCard.outcome} />
+            <Card hp={props.rightCard.hp} answer={props.rightCard.answer} choice={props.rightCard.choice} buttonChoice={props.rightCard.buttonChoice} outcome={props.rightCard.outcome} />
+            <Card hp={props.leftCard.hp} answer={props.leftCard.answer} choice={props.leftCard.choice} buttonChoice={props.leftCard.buttonChoice} outcome={props.leftCard.outcome} />
         </div>
     </div>
     )
