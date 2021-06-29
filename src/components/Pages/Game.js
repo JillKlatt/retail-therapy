@@ -30,6 +30,12 @@ function Game() {
 
     const [currentRound, setCurrentRound] = useState(round)
 
+    const [showModal, setShowModal] = useState(false)
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    }
+
     function submitGame() {
         // debugger
         fetch("http:///127.0.0.1:3001/users", {
@@ -56,8 +62,10 @@ function Game() {
         if (round === 0){
             return <RoundZero setCurrentRound={setCurrentRound}/>
         }
-        for (let i= (round - 1); i < 3; i++)
-        return <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} setCurrentRound={setCurrentRound}/>
+        for (let i= (round - 1); i <= villainArray.length; i++)
+            return (
+            <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} openModal={openModal} setCurrentRound={setCurrentRound}/>
+        )
         if (round === (villainArray.length + 1)){
             return <LastRound submitGame={submitGame}/>
         }
