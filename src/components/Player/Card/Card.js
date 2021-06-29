@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { addPoint, changeRound } from '../../Actions/index'
+import { addPoint, changeRound, addHP, removeHP, changeHP } from '../../Actions/index'
 import { Modal } from './Modal';
 import './Card.css'
 
@@ -29,11 +29,14 @@ function Card(props) {
 
     const addPointAC = bindActionCreators(addPoint, dispatch)
 
+    const changeHPAC = bindActionCreators(changeHP, dispatch)
+
     const renderOutcome = () => {
         //alert(props.outcome)
         openModal()
         changeRoundAC()
             if (props.answer === 'correct'){ addPointAC()}
+            if (props.hp !== undefined){ changeHPAC(props.hp)}
         }
 
     return(
