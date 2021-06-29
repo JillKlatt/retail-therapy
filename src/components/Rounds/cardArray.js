@@ -1,19 +1,21 @@
 export const rightCardArray = [
     {
         answer:"correct", 
+        hp: -10,
         choice: "Stand Your Ground, it's your day off, you're basically a customer too", 
         buttonChoice: "Intimiation!", 
         outcome: "You stare her down as she locks eyes with you, but at the last moment course-corrects and veers to her right"
     },
     {
         answer:"incorrect", 
+        health: 0,
         choice: "Round Two", 
         buttonChoice: "Check the Computer", 
         outcome: "The computer holds an evil email!"
     },
     {
         answer:"incorrect", 
-        hp: 10,
+        hp: +10,
         choice: "Ignore Her and go check the cabinets, maybe there's something that will help there", 
         buttonChoice: "Investigate!", 
         outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull "
