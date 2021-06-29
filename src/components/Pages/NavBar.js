@@ -10,20 +10,21 @@ function NavBar(){
 
     return(
         <div>
-        <Navbar expandSm light>
+        <Navbar expandXL>
             <Nav start>
-        {/* <div id='nav-bar' className='navbar'> */}
+        <div id='nav-bar' className='navbar'>
             <Link to='/game'>
-                <NavbarLink light brand id='game'>Let's Play</NavbarLink>
+                <NavbarLink light id='game'>Let's Play</NavbarLink>
             </Link>
             <Link to='/leaderboard'>
-                <NavbarLink light brand id='leaderboard'>Leaderboard</NavbarLink>
+                <NavbarLink light id='leaderboard'>Leaderboard</NavbarLink>
             </Link>
             <Link to='/about'>
-                <NavbarLink light brand id='about'>About</NavbarLink>
+                <NavbarLink light id='about'>About</NavbarLink>
             </Link>
+   </div>
             </Nav>
-        {/* </div> */}        
+
         </Navbar>
             <ScoreCard />
         </div>
