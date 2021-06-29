@@ -32,8 +32,8 @@ function Card(props) {
     const changeHPAC = bindActionCreators(changeHP, dispatch)
 
     const renderOutcome = () => {
-        //alert(props.outcome)
-        openModal()
+        alert(props.outcome)
+        //openModal()
         changeRoundAC()
             if (props.answer === 'correct'){ addPointAC()}
             if (props.hp !== undefined){ changeHPAC(props.hp)}
