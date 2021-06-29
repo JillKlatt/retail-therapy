@@ -11,9 +11,6 @@ import { rightCardArray, leftCardArray } from '../Rounds/cardArray'
 import {resetPoints, resetRound, addLeader } from '../Actions/index'
 
 
-
-
-
 function Game() {
 
     const dispatch = useDispatch()
