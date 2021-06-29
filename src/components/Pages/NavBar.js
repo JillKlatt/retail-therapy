@@ -10,11 +10,11 @@ function NavBar(){
 
     return(
         <div>
-        <Navbar expandXL>
-            <Nav start>
+        {/* <Navbar expandXL> */}
+        <Nav start>
         <div id='nav-bar' className='navbar'>
             <Link to='/game'>
-                <NavbarLink light id='game'>Let's Play</NavbarLink>
+                <NavbarLink id='game'>Let's Play</NavbarLink>
             </Link>
             <Link to='/leaderboard'>
                 <NavbarLink light id='leaderboard'>Leaderboard</NavbarLink>
@@ -25,7 +25,7 @@ function NavBar(){
    </div>
             </Nav>
 
-        </Navbar>
+        {/* </Navbar> */}
             <ScoreCard />
         </div>
     )

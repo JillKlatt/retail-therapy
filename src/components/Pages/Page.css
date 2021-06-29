@@ -4,17 +4,18 @@
     background-color: rgb(39, 84, 105);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
+
   }
 
   .navbar a {
     float:left;
-    font-size: 50px;
+    font-size: 45px;
     color: white;
     text-align: center;
     justify-content: space-around;
-    padding: 14px 16px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 5px 5px;
+    margin-left: 100px;
+    margin-right: 100px;
     text-decoration: none;
     /* position:inherit; */
   }
@@ -30,9 +31,9 @@
     float: right;
   }
 
-  .scorecard {
-    font-size: 35px;
-  }
+  /* .scorecard {
+
+  } */
 
   .top-header{
     color: white;
@@ -70,16 +71,21 @@
 
 
   
-  /* .name-badge{
-    
+  .name-badge{
   border: 1px solid rgba(0, 0, 0, 0.7);
   margin: 0 auto;
-  width: 500px;
-  height: 300px;
-  background-color: red;
+  width: 30%;
+  height: auto;
+  background-color: rgb(197, 116, 116);
   border-radius: 20px;
   padding: 10px 0;
+  font-size: 35px;
   }
+
+  .points-badge{
+    font-size: 30px;
+  }
+  /*
   .name-badge-title {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
