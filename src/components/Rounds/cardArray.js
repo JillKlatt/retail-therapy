@@ -7,16 +7,16 @@ export const rightCardArray = [
     },
     {
         answer:"incorrect", 
+        choice: "Round Two", 
+        buttonChoice: "Check the Computer", 
+        outcome: "The computer holds an evil email!"
+    },
+    {
+        answer:"incorrect", 
         hp: 10,
         choice: "Ignore Her and go check the cabinets, maybe there's something that will help there", 
         buttonChoice: "Investigate!", 
         outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull "
-    },
-    {
-        answer:"incorrect", 
-        choice: "Ignore Her", 
-        buttonChoice: "Go check the cabinets", 
-        outcome: "You Ran Away!"
     },
     {
         answer:"correct", 
@@ -34,16 +34,16 @@ export const leftCardArray = [
         outcome: "You attempt to leap to your right to avoid the oncoming cart, but the customer sees your movement and redirects her attack towards you "
     },
     {
+        answer:"correct", 
+        choice: "Round Two", 
+        buttonChoice: "Check the break board!", 
+        outcome: "She should be in today.."
+    },
+    {
         answer: "correct",
         choice: "Ask her about her cats",
         buttonChoice: "Persuasion!",
         outcome: "Lisa regales you with trivia and pictures of her multiple cats. In between this information, she mentions she saw the manager in the stockroom."
-    },
-    {
-        answer:"correct", 
-        choice: "Right Answer", 
-        buttonChoice: "Run Away!", 
-        outcome: "You Ran Away!"
     },
     {
         answer:"correct", 
