@@ -48,13 +48,16 @@ function App() {
 
 
   return (
-    <div style={{backgroundImage: "url(/supermarketcart_maincropped2.jpg)"}}>
+    <div style={{
+      backgroundImage: "url(/supermarketcart_maincropped.jpg)" position: fixed
+      
+      }}>
     <div className="App" >
-      <div className='App-header'>
+      <header className='App-header'>
       <Header />
-      </div>
+      </header>
       <Router>
-      <header className="app-body">
+      <body className="app-body">
         {displayUserInfo()}
         <Switch>
           <Route exact path='/game'>
@@ -71,7 +74,7 @@ function App() {
           </Route>
         </Switch>
         
-      </header>
+      </body>
       </Router>
     </div>
     </div>
