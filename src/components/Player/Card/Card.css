@@ -1,5 +1,5 @@
 .card-container{
-    width: 700px;
+    width: 600px;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     transition: 0.3s;
@@ -7,7 +7,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+    display: block;
 }
 
 .card-container:hover{
@@ -15,11 +15,11 @@
     box-shadow: 0px 0px 15px -4px;
 }
 
-/* .card-content{
+.card-content{
     margin: 2rem;
     margin-top: 0.5rem;
 
-} */
+}
 
 h2,p{
     /* Resetting default value */

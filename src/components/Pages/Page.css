@@ -7,7 +7,7 @@
   }
 
   .navbar a {
-    float: left;
+    float:left;
     font-size: 50px;
     color: white;
     text-align: center;
@@ -16,10 +16,11 @@
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
+    /* position:inherit; */
   }
   .navbar-centered a {
     float: none;
-    position: absolute;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
