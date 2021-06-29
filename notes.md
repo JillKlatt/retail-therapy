@@ -66,8 +66,14 @@ jQuery methods.
 
 ## 6/28
 [X] Readme
-[ ] Add Modal
+[X] Add Modal
 [ ] Add Story
 [ ] Add seed data
 [ ] Play again? option
 
+## 6/29
+[ ] Add Story
+[ ] Fix Router
+[ ] Add health points
+[ ] Add play again
+[ ] Add seed data
