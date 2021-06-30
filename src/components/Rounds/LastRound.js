@@ -1,12 +1,12 @@
 import Villain from '../Player/Villain/Villain'
-import {Route, Link} from "react-router-dom";
-import Leaderboard from '../Pages/Leaderboard';
+import { Link } from "react-router-dom";
 
 function LastRound(props) {
 
     function finishGame() {
         props.submitGame()
     }
+
 
     return (
     <div>    
