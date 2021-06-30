@@ -1,27 +1,16 @@
-import React, { useState } from 'react'
+// import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { addPoint, changeRound, addHP, removeHP, changeHP } from '../../Actions/index'
-import { Modal } from './Modal';
+import { addPoint, changeRound, changeHP } from '../../Actions/index'
+// import { Modal } from './Modal';
 import './Card.css'
 
-// const Button = styled.button`
-//   min-width: 100px;
-//   padding: 16px 32px;
-//   border-radius: 4px;
-//   border: none;
-//   background: #141414;
-//   color: #fff;
-//   font-size: 24px;
-//   cursor: pointer;
-// `
-
 function Card(props) {
-    const [showModal, setShowModal] = useState(false)
+    // const [showModal, setShowModal] = useState(false)
 
-    const openModal = () => {
-        setShowModal(prev => !prev)
-    }
+    // const openModal = () => {
+    //     setShowModal(prev => !prev)
+    // }
 
     const dispatch = useDispatch()
   
@@ -42,7 +31,7 @@ function Card(props) {
     return(
 
         <div >
-            <Modal outcome={props.outcome} showModal={showModal} setShowModal={setShowModal} /> 
+            {/* <Modal outcome={props.outcome} showModal={showModal} setShowModal={setShowModal} />  */}
             <div className='card-container'>
                 <div className='column'>
                 <div className='card-content'>
