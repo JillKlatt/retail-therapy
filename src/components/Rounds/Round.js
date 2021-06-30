@@ -1,22 +1,26 @@
 import Villain from '../Player/Villain/Villain'
 import Card from '../Player/Card/Card'
 import './Round.css'
-import { Modal } from '../Player/Card/Modal';
-import { useState } from 'react'
 
 
 
-function Round(props) {
+const Round = ({villains, rightCard, leftCard}) => {
+    console.log(rightCard)
+
+    const {answer, btn, choice, hp, outcome} = rightCard
+    console.log(answer)
+
+    const {name, description} = villains
 
     return (
     <div className='round'>    
         <div className='villain'>
-            <Villain name={props.villains.name} description={props.villains.description}/>
+            <Villain name={name} description={description}/>
 
         </div>
         <div className='card-row'>
-            <Card hp={props.rightCard.hp} answer={props.rightCard.answer} choice={props.rightCard.choice} buttonChoice={props.rightCard.buttonChoice} outcome={props.rightCard.outcome} />
-            <Card hp={props.leftCard.hp} answer={props.leftCard.answer} choice={props.leftCard.choice} buttonChoice={props.leftCard.buttonChoice} outcome={props.leftCard.outcome} />
+            <Card hp={rightCard.hp} answer={rightCard.answer} choice={rightCard.choice} buttonChoice={rightCard.buttonChoice} outcome={rightCard.outcome} />
+            <Card hp={leftCard.hp} answer={leftCard.answer} choice={leftCard.choice} buttonChoice={leftCard.buttonChoice} outcome={leftCard.outcome} />
         </div>
     </div>
     )
