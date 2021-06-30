@@ -27,30 +27,31 @@ export const rightCardArray = [
         outcome: "You found her!"   
     }
 ]
-
 export const leftCardArray = [
     {
-        answer:"incorrect", 
-        choice: "You're barely in the door, it's not worth making a scene in the vestibule with some stranger. Dodge out of the way just in time.", 
-        buttonChoice: "Dexterity!", 
-        outcome: "You attempt to leap to your right to avoid the oncoming cart, but the customer sees your movement and redirects her attack towards you "
+        lAnswer:"incorrect", 
+        lHp: 0,
+        lChoice: "You're barely in the door, it's not worth making a scene in the vestibule with some stranger. Dodge out of the way just in time.", 
+        lButtonChoice: "Dexterity!", 
+        lOutcome: "You attempt to leap to your right to avoid the oncoming cart, but the customer sees your movement and redirects her attack towards you "
     },
     {
-        answer:"correct", 
-        choice: "The break board could give some insight into who is here and where she might be", 
-        buttonChoice: "Perception!", 
-        outcome: "According to the board she should be on break now! Let's go search for her there!"
+        lAnswer:"correct", 
+        lChoice: "The break board could give some insight into who is here and where she might be", 
+        lButtonChoice: "Perception!", 
+        lOutcome: "According to the board she should be on break now! Let's go search for her there!"
     },
     {
-        answer: "correct",
-        choice: "Ask her about her cats",
-        buttonChoice: "Persuasion!",
-        outcome: "Lisa regales you with trivia and pictures of her multiple cats. In between this information, she mentions she saw the manager in the stockroom."
+        lAnswer: "correct",
+        lHp: 0,
+        lChoice: "Ask her about her cats",
+        lButtonChoice: "Persuasion!",
+        lOutcome: "Lisa regales you with trivia and pictures of her multiple cats. In between this information, she mentions she saw the manager in the stockroom."
     },
     {
-        answer:"correct", 
-        choice: "Your manager isn't one to take breaks, but perhaps she's searching for something over there", 
-        buttonChoice: "Go Left to check behind the pallets", 
-        outcome: "You found her!"   
+        lAnswer:"correct", 
+        lChoice: "Your manager isn't one to take breaks, but perhaps she's searching for something over there", 
+        lButtonChoice: "Go Left to check behind the pallets", 
+        lOutcome: "You found her!"   
     }
 ]
