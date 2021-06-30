@@ -3,7 +3,6 @@ import './App.css';
 import NavBar from './components/Pages/NavBar';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { getLeaders} from './components/Actions/index';
 import {
   BrowserRouter as Router,
@@ -24,11 +23,8 @@ function App() {
 
   const dispatch = useDispatch()
 
-  //Get Leaders
-  const getLeadersAC = bindActionCreators(getLeaders, dispatch)
-
   useEffect(() => {
-    getLeadersAC()}, []
+    dispatch(getLeaders())}, []
 )// eslint-disable-line react-hooks/exhaustive-deps
 
 // Doesn't display Navbar unless you're signed in
