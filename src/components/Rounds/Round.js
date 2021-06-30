@@ -5,12 +5,11 @@ import './Round.css'
 
 
 const Round = ({villains, rightCard, leftCard}) => {
-    console.log(rightCard)
-
-    const {answer, btn, choice, hp, outcome} = rightCard
-    console.log(answer)
-
+    
+    const { answer, buttonChoice, choice, hp, outcome } = rightCard
+    const { lAnswer, lButtonChoice, lChoice, lHp, lOutcome} = leftCard
     const {name, description} = villains
+
 
     return (
     <div className='round'>    
@@ -19,8 +18,8 @@ const Round = ({villains, rightCard, leftCard}) => {
 
         </div>
         <div className='card-row'>
-            <Card hp={rightCard.hp} answer={rightCard.answer} choice={rightCard.choice} buttonChoice={rightCard.buttonChoice} outcome={rightCard.outcome} />
-            <Card hp={leftCard.hp} answer={leftCard.answer} choice={leftCard.choice} buttonChoice={leftCard.buttonChoice} outcome={leftCard.outcome} />
+            <Card hp={hp} answer={answer} choice={choice} buttonChoice={buttonChoice} outcome={outcome} />
+            <Card hp={lHp} answer={lAnswer} choice={lChoice} buttonChoice={lButtonChoice} outcome={lOutcome} />
         </div>
     </div>
     )
