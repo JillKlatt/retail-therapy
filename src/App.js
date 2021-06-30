@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/Pages/NavBar';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getLeaders} from './components/Actions/index';
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     getLeadersAC()}, []
-)
+)// eslint-disable-line react-hooks/exhaustive-deps
 
 // Doesn't display Navbar unless you're signed in
   function displayUserInfo() {
