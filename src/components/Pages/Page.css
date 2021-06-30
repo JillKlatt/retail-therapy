@@ -12,13 +12,20 @@
     font-size: 45px;
     color: white;
     text-align: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     padding: 5px 5px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 2%;
+    /*margin-right: 150px; */
     text-decoration: none;
-    /* position:inherit; */
+    width: 30%;
+
   }
+
+  .navbar a:hover{
+    color: black !important;
+  }
+
+
   .navbar-centered a {
     float: none;
 
