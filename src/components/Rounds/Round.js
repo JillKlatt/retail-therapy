@@ -5,10 +5,10 @@ import './Round.css'
 
 
 const Round = ({villains, rightCard, leftCard}) => {
-    
+
     const { answer, buttonChoice, choice, hp, outcome } = rightCard
     const { lAnswer, lButtonChoice, lChoice, lHp, lOutcome} = leftCard
-    const {name, description} = villains
+    const { bname, description } = villains
 
 
     return (
