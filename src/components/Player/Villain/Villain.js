@@ -3,12 +3,6 @@ import './Villain.css'
 
 function Villain(props) {
 
-    // constructor(props){
-    //     super(props);
-    //     this.name = props.name
-    //     this.description = props.description
-    // }
-
         return(
             <div className='villain-container'>
                 <div className='villain-content'>
