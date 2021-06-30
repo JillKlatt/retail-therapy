@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { createUser, getLeaders} from '../Actions/index';
+import { createUser} from '../Actions/index';
 import Form from '../Form'
 
-function Welcome(props) {
+function Welcome() {
 
     const dispatch = useDispatch()
     const createUserAC = bindActionCreators(createUser, dispatch)
@@ -20,7 +20,7 @@ function Welcome(props) {
     return (
         <div>
             <h2>Welcome to your first day at this Unnamed Discount Grocery Store!</h2>
-        <p>We're happy to have you aboard our team, remind us of your name?</p>
+            <p>We're happy to have you aboard our team, remind us of your name?</p>
         <br />
         {getUserInput()}
         </div>
