@@ -15,10 +15,9 @@ function Game() {
 
     const dispatch = useDispatch()
 
+    // Binds the action to dispatch (same as doing dispatch(resetRound()) )
     const resetRoundAC = bindActionCreators(resetRound, dispatch)
-
     const resetPointsAC = bindActionCreators(resetPoints, dispatch)
-
     const addLeaderAC = bindActionCreators(addLeader, dispatch)
 
     const state = useSelector((state) => state)
@@ -65,8 +64,6 @@ function Game() {
         <div>
             <br></br>
             {renderRound()}
-            <br></br>
-            {/* <button onClick={submitGame}> Finish Game & Submit Score!</button> */}
         </div>
     )
 } 
