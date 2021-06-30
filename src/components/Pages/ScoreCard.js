@@ -20,28 +20,14 @@ function ScoreCard() {
         }
     }
 
-    function renderNameBadge() {
-        return (
-        <div>
-        <h1 className='name-badge-title'>Hello</h1>
-        <p className='name-badge-copy'>My Name Is</p>
-        </div>
-        )
-    }
-
     return(
         <div className='scorecard'>
-            {/* <section className='name-badge' cid='outer'>
-            <div>
-                {renderNameBadge()}
-            </div>
-            <canvas className='name-badge-canvas' id='canvas'></canvas>
-            </section> */}
+
             <div className='name-badge'>
                 {renderUser()}
             </div>
             <div className='points-badge'>
-                <span>{renderPoints()}</span>                                   <span>{renderHealth()}</span>
+                <span>{renderPoints()}</span>   <span>{renderHealth()}</span>
             </div>
         </div>
     )
