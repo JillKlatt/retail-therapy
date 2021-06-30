@@ -12,23 +12,8 @@ export const addPoint = (amount) => {
     }
 }
 
-export const addHP = (amount) => {
-    return{
-        type: "ADD_HP",
-        payload: amount
-    }
-}
-
-export const removeHP = (amount) => {
-
-    return{
-        type: "REMOVE_HP",
-        payload: amount
-    }
-}
 
 export const changeHP = (amount) => {
-        console.log(amount)
     return{
         type: 'CHANGE_HP',
         payload: amount
