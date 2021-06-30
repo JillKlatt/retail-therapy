@@ -22,8 +22,6 @@ function App() {
 
   const state = useSelector((state) => state)
 
-  const [didInput, setDidInput] = useState(true)
-
   const dispatch = useDispatch()
 
   //Get Leaders
@@ -73,19 +71,22 @@ function App() {
 
 
   return (
+        <Router>
     <div className='container'>
-    <div className="App" >
+    <div className="App" >      
+
       <header className='App-header'>
       <Header />
       </header>
-      <Router>
-      <body className="app-body">
+
+      <div className="app-body">
         {displayUserInfo()}
         {playerSignedIn()}
-      </body>
-      </Router>
+      </div>
+    
     </div>
     </div>
+    </Router>
   );
 }
 
