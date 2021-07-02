@@ -41,6 +41,13 @@ export const resetPoints = (points) => {
     }
 }
 
+export const resetHealth = (health) => {
+    return{
+        type: 'RESET_HEALTH',
+        paylaod: health
+    }
+}
+
 export const submitGame = (user) => {
     return (dispatch) => {
     fetch("http:///127.0.0.1:3001/users", {
