@@ -12,7 +12,6 @@ export const addPoint = (amount) => {
     }
 }
 
-
 export const changeHP = (amount) => {
     return{
         type: 'CHANGE_HP',
@@ -67,7 +66,6 @@ export const submitGame = (user) => {
 
 export const getLeaders = () => {
     return (dispatch) => {
-        //console.log(`Dispatch: ${dispatch}`)
         fetch("http:///127.0.0.1:3001/users")
         .then(resp => resp.json())
         .then(data => {
@@ -80,7 +78,6 @@ export const getLeaders = () => {
 }
 
 export const addLeader = (user) => {
-    // console.log(user)
     return{
         type: 'ADD_LEADER',
         payload: user
