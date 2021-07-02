@@ -16,7 +16,6 @@ function NavBar(){
             <ScoreCard />
         </div>
     )
-
    }
 
 
