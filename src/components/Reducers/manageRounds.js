@@ -17,5 +17,3 @@ export default function manageRounds(state = {round: 0}, action){
     }
 
 }
-
-//                round: [state.round, action.payload]
