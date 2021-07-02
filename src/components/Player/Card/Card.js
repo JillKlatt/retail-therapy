@@ -1,21 +1,13 @@
-// import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addPoint, changeRound, changeHP } from '../../Actions/index'
-// import { Modal } from './Modal';
 import './Card.css'
 
 function Card(props) {
-    // const [showModal, setShowModal] = useState(false)
-
-    // const openModal = () => {
-    //     setShowModal(prev => !prev)
-    // }
 
     const dispatch = useDispatch()
 
     const renderOutcome = () => {
         alert(props.outcome)
-        //openModal()
         dispatch(changeRound())
             if (props.answer === 'correct'){ dispatch(addPoint())}
             if (props.hp !== undefined){ dispatch(changeHP(props.hp))}
@@ -24,7 +16,6 @@ function Card(props) {
     return(
 
         <div >
-            {/* <Modal outcome={props.outcome} showModal={showModal} setShowModal={setShowModal} />  */}
             <div className='card-container'>
                 <div className='column'>
                 <div className='card-content'>

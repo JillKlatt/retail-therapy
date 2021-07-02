@@ -27,19 +27,16 @@ function App() {
     dispatch(getLeaders())}, []
 )// eslint-disable-line react-hooks/exhaustive-deps
 
-// Doesn't display Navbar unless you're signed in
+// Doesn't display Navbar or routes unless you're signed in
   function displayUserInfo() {
     if (state.user.username !== ""){
     return (
-      <div>
-      <NavBar />
-      </div>
+      playerSignedIn()
     )}
     else
       return (
         <div className='app-body'>
        <Welcome />
-
         </div>
       )
   }
@@ -47,7 +44,9 @@ function App() {
   // Protects routes from being accessed if you're not signed in
   function playerSignedIn() {
     if (state.user.username !== ""){
-    return (
+    return (      
+      <div>
+      <NavBar />
       <Switch>
       <Route exact path='/game'>
         <Game />
@@ -62,6 +61,7 @@ function App() {
         <Redirect to='/about'/>
       </Route>
     </Switch>
+    </div>
     )}
   }
 
@@ -77,7 +77,6 @@ function App() {
 
       <div className="app-body">
         {displayUserInfo()}
-        {playerSignedIn()}
       </div>
     
     </div>
