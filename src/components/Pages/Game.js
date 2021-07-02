@@ -46,6 +46,11 @@ function Game() {
         addLeaderAC(state.user)
     }
 
+    const playAgain = () => {
+        resetPointsAC()
+        resetRoundAC()
+    }
+
 
     function renderRound() {
         if (round === 0){
@@ -56,7 +61,7 @@ function Game() {
             <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} setCurrentRound={setCurrentRound}/>
         )
         if (round === (villainArray.length + 1)){
-            return <LastRound submitGame={submitGame}/>
+            return <LastRound submitGame={submitGame} playAgain={playAgain}/>
         }
     }
 
