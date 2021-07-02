@@ -8,7 +8,7 @@ import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
 import { rightCardArray, leftCardArray } from '../Rounds/cardArray'
 
-import {resetPoints, resetRound, addLeader } from '../Actions/index'
+import {resetPoints, resetRound, resetHealth, addLeader } from '../Actions/index'
 
 
 function Game() {
@@ -18,6 +18,7 @@ function Game() {
     // Binds the action to dispatch (same as doing dispatch(resetRound()) )
     const resetRoundAC = bindActionCreators(resetRound, dispatch)
     const resetPointsAC = bindActionCreators(resetPoints, dispatch)
+    const resetHealthAC = bindActionCreators(resetHealth, dispatch)
     const addLeaderAC = bindActionCreators(addLeader, dispatch)
 
     const state = useSelector((state) => state)
@@ -37,18 +38,18 @@ function Game() {
         })
         .then(resp => resp.json())
         .then(data => (data))
-        resetGame()
+        finalizeGame()
     }
 
     const resetGame = () => {
         resetRoundAC()
         resetPointsAC()
-        addLeaderAC(state.user)
+        resetHealthAC()
     }
 
-    const playAgain = () => {
-        resetPointsAC()
-        resetRoundAC()
+    const finalizeGame = () => {
+        resetGame()
+        addLeaderAC(state.user)
     }
 
 
@@ -61,7 +62,7 @@ function Game() {
             <Round villains={villainArray[i]} rightCard={rightCardArray[i]} leftCard={leftCardArray[i]} setCurrentRound={setCurrentRound}/>
         )
         if (round === (villainArray.length + 1)){
-            return <LastRound submitGame={submitGame} playAgain={playAgain}/>
+            return <LastRound submitGame={submitGame} playAgain={resetGame}/>
         }
     }
 
