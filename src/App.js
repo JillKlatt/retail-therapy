@@ -67,20 +67,17 @@ function App() {
 
 
   return (
-      <Router>
-    <div className='container'>
-    <div className="App" >      
-
-      <header className='App-header'>
-      <Header />
-      </header>
-
-      <div className="app-body">
-        {displayUserInfo()}
+    <Router>
+      <div className='container'>
+      <div className="App" >      
+        <header className='App-header'>
+          <Header />
+        </header>
+        <div className="app-body">
+          {displayUserInfo()}
+        </div>
       </div>
-    
-    </div>
-    </div>
+      </div>
     </Router>
   );
 }
