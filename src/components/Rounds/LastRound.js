@@ -10,7 +10,7 @@ function LastRound(props) {
 
     return (
     <div>    
-    <Villain name={"End of the Line Buddy!"}/>
+    <Villain name={"Way to Go!"}/>
     <Link onClick={finishGame} to='/leaderboard'> The Game is Over! Click here to submit your score!</Link>
     </div>
     )
