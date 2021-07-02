@@ -28,6 +28,12 @@ export default function manageUser(state = {
                 health: state.health + action.payload
             }
 
+        case 'RESET_HEALTH':
+            return {
+                ...state,
+                health: 50
+            }
+
         default:
             return state; 
     }
