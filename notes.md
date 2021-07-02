@@ -75,3 +75,8 @@ jQuery methods.
 [X] Add health points
 [X] Add seed data
 [ ] Play again? option
+[X] Clear console
+[ ] Review Routes
+[ ] Review Lifecyle
+[X] Watch callstack video
+
