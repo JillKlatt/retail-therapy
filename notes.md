@@ -70,13 +70,14 @@ jQuery methods.
 
 
 ## TO DO
-[ ] Add Story
+
+[X] Add Story
 [X] Fix Router
 [X] Add health points
 [X] Add seed data
-[ ] Play again? option
+[X] Play again? option
 [X] Clear console
-[ ] Review Routes
-[ ] Review Lifecyle
+[X] Review Routes
+[X] Review Lifecyle
 [X] Watch callstack video
 

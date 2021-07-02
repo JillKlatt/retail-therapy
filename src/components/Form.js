@@ -15,7 +15,7 @@ function UsernameInput(props) {
         if (username === ""){ alert("The glory of victory means nothing if you're not recognized! Your name cannot be blank!")}
         else {props.createUserAC(username)
         setUsername("")
-        props.setInput(true)
+        props.setInput((prevState) => !prevState)
         }
     }
 
