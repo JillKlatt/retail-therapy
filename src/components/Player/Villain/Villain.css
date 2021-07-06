@@ -5,12 +5,13 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    background: rgba(243, 189, 107, 0.5);
 }
 
 .villain-content{
     margin: 2rem;
     margin-top: 0.5rem;
-    color: rgb(91, 91, 180);
+    color: rgb(66, 66, 126);
     /* outline: red; */
     font-size: 30px;
 }

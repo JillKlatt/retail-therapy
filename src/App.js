@@ -24,6 +24,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    document.title = "Retail Therapy"
     dispatch(getLeaders())}, []
 )// eslint-disable-line react-hooks/exhaustive-deps
 

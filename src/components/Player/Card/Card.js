@@ -16,7 +16,7 @@ function Card(props) {
     return(
 
         <div >
-            <div className='card-container'>
+            <div className='card-container background'>
                 <div className='column'>
                 <div className='card-content'>
                     <p>{props.choice}</p>

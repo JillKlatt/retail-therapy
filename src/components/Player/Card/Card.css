@@ -8,12 +8,10 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color: white;
-    opacity: .4;
 }
 
 .background{
-
+    background: rgba(248, 225, 190, 0.5);
 }
 
 .card-container:hover{
@@ -25,6 +23,7 @@
     margin: 0rem;
     margin-top: 0.5rem;
     font-size: 30px;
+    color: rgb(66, 66, 126);
 }
 
 h2,p{
@@ -58,7 +57,7 @@ h4 {
 
 .btn button{
     padding: 0.5rem;
-    background-color: bisque;
+    background-color: rgb(243, 177, 202);
     border:none;
     transition: 0.2s;
     margin-top: 1rem;
