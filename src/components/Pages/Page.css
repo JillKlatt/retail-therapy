@@ -101,6 +101,12 @@
   span {
     width: 50px;
   }
+
+  .leaderboard{
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /*
   .name-badge-title {
     color: white;

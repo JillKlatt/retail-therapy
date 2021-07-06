@@ -15,11 +15,13 @@ function Leaderboard() {
     }
 
     return(
-        <div>
+        <div className='leaderboard'>            
+            <h3>Right now this deployment isn't currently tied to the backend server.</h3>
+            <h3>But if it was, it would look like this:</h3>
             <ol>
             {renderLeaders()}
-            Right Now this deployment isn't currently tied to the backend server. But if it was, it would look like this:
-            <li>Big Winner Baby 100</li>
+
+            <li>Big Winner Baby - 100</li>
             <li>Jill - 60</li>
             <li>Thunder - 50</li>
             <li>Maggie - 40</li>
