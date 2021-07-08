@@ -25,7 +25,8 @@ function App() {
 
   useEffect(() => {
     document.title = "Retail Therapy"
-    dispatch(getLeaders())}, []
+    // dispatch(getLeaders())
+  }, []
 )// eslint-disable-line react-hooks/exhaustive-deps
 
 // Doesn't display Navbar or routes unless you're signed in
