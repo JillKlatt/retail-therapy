@@ -64,18 +64,18 @@ export const submitGame = (user) => {
     }
 }
 
-export const getLeaders = () => {
-    return (dispatch) => {
-        fetch("http:///127.0.0.1:3001/users")
-        .then(resp => resp.json())
-        .then(data => {
-            dispatch({
-                type: "GET_LEADERS",
-                payload: data
-            })
-        })
-    }
-}
+// export const getLeaders = () => {
+//     return (dispatch) => {
+//         fetch("http:///127.0.0.1:3001/users")
+//         .then(resp => resp.json())
+//         .then(data => {
+//             dispatch({
+//                 type: "GET_LEADERS",
+//                 payload: data
+//             })
+//         })
+//     }
+// }
 
 export const addLeader = (user) => {
     return{
