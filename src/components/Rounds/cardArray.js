@@ -4,21 +4,24 @@ export const rightCardArray = [
         hp: -10,
         choice: "Stand Your Ground, it's your day off, you're basically a customer too", 
         buttonChoice: "Intimiation!", 
-        outcome: "You stare her down as she locks eyes with you, but at the last moment course-corrects and veers to her right"
+        outcome: "You stare her down as she locks eyes with you, but at the last moment course-corrects and veers to her right",
+        inventory: ''
     },
     {
         answer:"incorrect", 
         health: 0,
         choice: "The computer might have a list of your manager's tasks for the day", 
         buttonChoice: "Investigation!", 
-        outcome: "It's password protected! No luck here. Maybe check the breakroom?"
+        outcome: "It's password protected! No luck here. Maybe check the breakroom?",
+        inventory: ''
     },
     {
         answer:"incorrect", 
         hp: +10,
         choice: "Ignore her and go check the cabinets, maybe there's something that will help there", 
         buttonChoice: "Investigate!", 
-        outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull, chugging it might make you feel better"
+        outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull, chugging it might make you feel better",
+        inventory: "Off brand Redbull"
     },
     {
         answer:"correct", 
