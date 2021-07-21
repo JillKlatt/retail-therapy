@@ -34,16 +34,37 @@ export const resetRound = (round) => {
 }
 
 export const resetPoints = (points) => {
-    return{
+    return {
         type: 'RESET_POINTS',
         payload: points
     }
 }
 
 export const resetHealth = (health) => {
-    return{
+    return {
         type: 'RESET_HEALTH',
-        paylaod: health
+        payload: health
+    }
+}
+
+export const addToInventory = (item) => {
+    return {
+        type: "ADD_TO_INVENTORY",
+        payload: item
+    }
+}
+
+export const removeFromInventory = (item) => {
+    return {
+        type: "REMOVE_FROM_INVENTORY",
+        payload: item
+    }
+}
+
+export const resetInventory = (item) => {
+    return {
+        type: "RESET_INVENTORY",
+        payload: item
     }
 }
 
