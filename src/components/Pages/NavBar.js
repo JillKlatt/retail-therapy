@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-import ScoreCard from './ScoreCard'
+import ScoreCard from '../Scorecard/ScoreCard'
 import './Page.css'
 
 function NavBar(){
