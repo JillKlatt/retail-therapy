@@ -8,7 +8,7 @@ import LastRound from '../Rounds/LastRound'
 import { villainArray } from '../Rounds/villainArray'
 import { rightCardArray, leftCardArray } from '../Rounds/cardArray'
 
-import {resetPoints, resetRound, resetHealth, addLeader } from '../Actions/index'
+import {resetPoints, resetRound, resetHealth, addLeader, resetInventory } from '../Actions/index'
 
 
 function Game() {
@@ -20,6 +20,7 @@ function Game() {
     const resetPointsAC = bindActionCreators(resetPoints, dispatch)
     const resetHealthAC = bindActionCreators(resetHealth, dispatch)
     const addLeaderAC = bindActionCreators(addLeader, dispatch)
+    const resetInventoryAC = bindActionCreators(resetInventory, dispatch)
 
     const state = useSelector((state) => state)
 
@@ -45,6 +46,7 @@ function Game() {
         resetRoundAC()
         resetPointsAC()
         resetHealthAC()
+        resetInventoryAC()
     }
 
     const finalizeGame = () => {
