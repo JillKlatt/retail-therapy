@@ -16,10 +16,6 @@ function Leaderboard() {
        )
     }
 
-
-
-    
-
     return(
         <div className='leaderboard'>            
             <h3>Right now this deployment isn't currently tied to the backend server.</h3>
