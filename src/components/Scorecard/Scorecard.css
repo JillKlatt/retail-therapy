@@ -1,0 +1,48 @@
+.scorecard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.name-badge{
+    position:relative;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    height: auto;
+    background-color: rgb(197, 116, 116);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 35px;
+}
+  
+.points-badge span{
+    font-size: 30px;
+    width: 20px;
+}
+  
+span {
+    width: 50px;
+}
+
+#inventory-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 200px;
+    background-color: rgba(241, 171, 65, 0.452);
+    padding-right: 0px;
+}
+
+#inventory {
+    font-size: 20px;
+    color: black;
+}
+
+#inventory-item {
+    font-size: 12px;
+}
+
+#inventory-container p {
+    font-size: 20px;
+}
