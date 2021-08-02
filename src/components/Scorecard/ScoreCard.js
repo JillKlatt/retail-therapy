@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import '../Pages/Page.css'
+import './Scorecard.css'
 import Inventory from './Inventory'
 
 function ScoreCard() {
@@ -10,28 +10,30 @@ function ScoreCard() {
     }
 
     function renderPoints() {
-        if (state.user.points > 0){
-        return `Points: ${state.user.points}`
+        if (state.user.points > 0) {
+            return `Points: ${state.user.points}`
         }
     }
 
     function renderHealth() {
-        if (state.round.round > 0){
-        return `Health: ${state.user.health}`
+        if (state.round.round > 0) {
+            return `Health: ${state.user.health}`
         }
     }
 
-    return(
+    return (
         <div className='scorecard'>
+            <div id='main'>
+                <div className='name-badge'>
+                    {renderUser()}
+                </div>
+                <div className='points-badge'>
+                    <span>{renderPoints()}</span>   <span>{renderHealth()}</span>
+                </div>
 
-            <div className='name-badge'>
-                {renderUser()}
-            </div>
-            <div className='points-badge'>
-                <span>{renderPoints()}</span>   <span>{renderHealth()}</span>
-            </div>
-            <Inventory />
-        </div>
+            </div >
+                <Inventory />
+        </div >
     )
 }
 
