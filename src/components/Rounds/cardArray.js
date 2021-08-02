@@ -5,7 +5,7 @@ export const rightCardArray = [
         choice: "Stand Your Ground, it's your day off, you're basically a customer too", 
         buttonChoice: "Intimiation!", 
         outcome: "You stare her down as she locks eyes with you, but at the last moment course-corrects and veers to her right",
-        inventory: ''
+        inventory: 'Test 1'
     },
     {
         answer:"incorrect", 
@@ -13,7 +13,7 @@ export const rightCardArray = [
         choice: "The computer might have a list of your manager's tasks for the day", 
         buttonChoice: "Investigation!", 
         outcome: "It's password protected! No luck here. Maybe check the breakroom?",
-        inventory: ''
+        inventory: 'Test 2'
     },
     {
         answer:"incorrect", 
