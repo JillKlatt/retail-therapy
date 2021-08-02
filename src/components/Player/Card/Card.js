@@ -1,17 +1,19 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addPoint, changeRound, changeHP, addToInventory } from '../../Actions/index'
 import './Card.css'
 
 function Card(props) {
 
     const dispatch = useDispatch()
+    const inventory = useSelector(state => state.inventory.inventory)
+    console.log(inventory)
 
     const renderOutcome = () => {
         alert(props.outcome)
         dispatch(changeRound())
             if (props.answer === 'correct'){ dispatch(addPoint())}
             if (props.hp !== undefined){ dispatch(changeHP(props.hp))}
-            if (props.inventory !== ''){ dispatch(addToInventory(props.inventory))}
+            if (props.inventory !== '' && inventory < 3){ dispatch(addToInventory(props.inventory))}
         }
 
     return(
