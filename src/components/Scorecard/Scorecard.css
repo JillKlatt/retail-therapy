@@ -46,3 +46,11 @@ span {
 #inventory-container p {
     font-size: 20px;
 }
+
+#inventory-button {
+    font-size: 10px;
+}
+
+.hidden {
+    display: none;
+}
