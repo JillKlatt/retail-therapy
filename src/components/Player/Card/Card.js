@@ -1,20 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { addPoint, changeRound, changeHP, addToInventory } from '../../Actions/index'
 import './Card.css'
+import ChoiceModal from '../../Modal/ChoiceModal'
 
 function Card(props) {
 
     const dispatch = useDispatch()
     const inventory = useSelector(state => state.inventory.inventory)
-    console.log(inventory)
+    console.log(inventory.length)
 
-    const renderOutcome = () => {
-        alert(props.outcome)
-        dispatch(changeRound())
-            if (props.answer === 'correct'){ dispatch(addPoint())}
-            if (props.hp !== undefined){ dispatch(changeHP(props.hp))}
-            if (props.inventory !== '' && inventory < 3){ dispatch(addToInventory(props.inventory))}
-        }
+    // const renderOutcome = () => {
+    //     alert(props.outcome)
+    //     dispatch(changeRound())
+    //         if (props.answer === 'correct'){ dispatch(addPoint())}
+    //         if (props.hp !== undefined){ dispatch(changeHP(props.hp))}
+    //         if (props.inventory !== ''){ dispatch(addToInventory(props.inventory))}
+    //     }
 
     return(
 
@@ -25,7 +26,8 @@ function Card(props) {
                     <p>{props.choice}</p>
                 </div>
                 <div className='btn'>
-                    <button onClick={renderOutcome}>{props.buttonChoice}</button>
+                    <ChoiceModal hp={props.hp} inventory={props.inventory} outcome={props.outcome} buttonChoice={props.buttonChoice} />
+                    {/* <button onClick={renderOutcome} >{props.buttonChoice}</button> */}
                 </div>
                 </div>
             </div>
