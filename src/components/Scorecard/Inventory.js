@@ -9,16 +9,22 @@ function Inventory() {
     const state = useSelector((state) => state)
 
     const inventory = state.inventory.inventory
-    console.log(inventory)
+
+
+    function itemDescription() {
+        return (
+            <>
+            <p>Mouse Over"</p>
+            </>
+        )
+    }
 
     function renderInventory() {
-        if (inventory.length > 0 && inventory !== []) {
+        if (inventory.length >= 0) {
             return(
             <>
                 <h4 id='inventory'>Inventory:</h4>
-                <p>(You can only hold two items at one time)</p>
-                {inventory.map((item, index) => <ul id='inventory-item'>{item} key={index}<InventoryButton item={item}/></ul>)}
-
+                {inventory.map((item, index) => <ul id='inventory-item' key={index} onMouseOver={itemDescription}>{item} <InventoryButton item={item}/></ul>)}
             </>
             )
         }
