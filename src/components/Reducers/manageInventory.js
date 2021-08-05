@@ -9,7 +9,7 @@ export default function manageInventory(state = {inventory: []}, action){
         case "REMOVE_FROM_INVENTORY":
             return {
             ...state,
-            inventory: [state.inventory.filter(item => item !== action.payload)]
+            inventory: [...state.inventory.slice(0, action.payload), ...state.inventory.slice(action.payload + 1)]
             }
         
         case 'RESET_INVENTORY':
