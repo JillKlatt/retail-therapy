@@ -81,3 +81,8 @@ jQuery methods.
 [X] Review Lifecyle
 [X] Watch callstack video
 
+
+
+## INVENTORY:
+
+How to remove something completely from the inventory. Should I start the game with an item? Let's try that and see if we can always keep that item in there?
