@@ -14,8 +14,7 @@ import Leaderboard from './components/Pages/Leaderboard';
 import Game from './components/Pages/Game';
 import About from './components/Pages/About';
 import Header from './components/Pages/Header';
-import Welcome from './components/Pages/Welcome'
-
+import Welcome from './components/Pages/Welcome';
 
 function App() {
 
