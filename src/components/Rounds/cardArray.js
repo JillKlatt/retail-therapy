@@ -17,7 +17,7 @@ export const rightCardArray = [
     },
     {
         answer:"incorrect", 
-        hp: +10,
+        hp: 0,
         choice: "Ignore her and go check the cabinets, maybe there's something that will help there", 
         buttonChoice: "Investigate!", 
         outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull, chugging it might make you feel better",
@@ -27,13 +27,15 @@ export const rightCardArray = [
         answer:"correct", 
         choice: "You know your manager can sometimes prefer the solitude of the freezer, no one bothers you in there", 
         buttonChoice: "Go Left to the Freezer", 
-        outcome: "You found her!"   
+        outcome: "You found her!",
+        inventory: "Test Four"
     },
     {
         answer:"incorrect", 
         choice: "You don't get paid enough for this nonsense!", 
         buttonChoice: "Flight!", 
-        outcome: "Coward! You have to stay and fight because this game doesn't have that type of choice functionality yet. But also, come on."   
+        outcome: "Coward! You have to stay and fight because this game doesn't have that type of choice functionality yet. But also, come on.",
+        inventory: "Test Five"   
     },
     {
         answer:"correct", 
