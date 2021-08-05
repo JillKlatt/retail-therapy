@@ -1,18 +1,25 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { removeFromInventory } from '../Actions/index'
+import './Scorecard.css'
 
-function InventoryButton(props) {
+
+function InventoryButton({item}) {
 
     const dispatch = useDispatch()
 
+    let inventory = useSelector((state) => state.inventory.inventory)
 
-    function useItem() {
-        dispatch(removeFromInventory(props.item))
+    let index = inventory.indexOf(item)
+
+
+    function useItem(e) {
+        dispatch(removeFromInventory(index))
     }
+
 
     return (
         <>
-        <button onClick={useItem}>X</button>
+        <button id='inventory-button' onClick={useItem}>Use Item</button>
         </>
     )
 
