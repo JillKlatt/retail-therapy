@@ -18,8 +18,7 @@ function Leaderboard() {
 
     return(
         <div className='leaderboard'>            
-            <h3>Right now this deployment isn't currently tied to the backend server.</h3>
-            <h3>But if it was, it would look like this:</h3>
+
             <ol>
             {renderLeaders()}
 
