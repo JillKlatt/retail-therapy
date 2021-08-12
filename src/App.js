@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/Pages/NavBar';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { getLeaders} from './components/Actions/index';
+import { getLeaders} from './components/Actions/index';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     document.title = "Retail Therapy"
-    // dispatch(getLeaders())
+    dispatch(getLeaders())
   }, []
 )// eslint-disable-line react-hooks/exhaustive-deps
 

@@ -70,7 +70,7 @@ export const resetInventory = (item) => {
 
 export const submitGame = (user) => {
     return (dispatch) => {
-    fetch("http:///127.0.0.1:3001/users", {
+    fetch("https://retail-therapy-api.herokuapp.com/users", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -85,18 +85,18 @@ export const submitGame = (user) => {
     }
 }
 
-// export const getLeaders = () => {
-//     return (dispatch) => {
-//         fetch("http:///127.0.0.1:3001/users")
-//         .then(resp => resp.json())
-//         .then(data => {
-//             dispatch({
-//                 type: "GET_LEADERS",
-//                 payload: data
-//             })
-//         })
-//     }
-// }
+export const getLeaders = () => {
+    return (dispatch) => {
+        fetch("https://retail-therapy-api.herokuapp.com/users")
+        .then(resp => resp.json())
+        .then(data => {
+            dispatch({
+                type: "GET_LEADERS",
+                payload: data
+            })
+        })
+    }
+}
 
 export const addLeader = (user) => {
     return{
