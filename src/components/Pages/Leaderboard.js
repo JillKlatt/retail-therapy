@@ -6,12 +6,12 @@ function Leaderboard() {
 
     let leaders = useSelector((state) => state.leaders.leaders)
 
-    let staticLeaders = [{username: "Big Winner Baby", points: 100}, {username: "Jill", points: 60}, {username: "Thunder", points: 50}, {username: "Maggie", points: 40}]
+    // let staticLeaders = [{username: "Big Winner Baby", points: 100}, {username: "Jill", points: 60}, {username: "Thunder", points: 50}, {username: "Maggie", points: 40}]
 
     function renderLeaders(){
 
         // Need to sort leaders here to correctly render new users upon post
-        const sortedLeaders = staticLeaders.sort((a, b) => (a.points < b.points) ? 1 : -1)      
+        const sortedLeaders = leaders.sort((a, b) => (a.points < b.points) ? 1 : -1)      
         return (sortedLeaders.map((leader, index) => <li key={index}>{leader.username} - {leader.points}</li>)
        )
     }
