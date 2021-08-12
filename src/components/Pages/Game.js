@@ -27,9 +27,10 @@ function Game() {
     let round = useSelector((state) => state.round.round)
 
     const [currentRound, setCurrentRound] = useState(round)
+    console.log(state.user)
 
     function submitGame() {
-        fetch("http:///127.0.0.1:3001/users", {
+        fetch("https://retail-therapy-api.herokuapp.com/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
