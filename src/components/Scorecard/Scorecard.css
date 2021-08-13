@@ -51,6 +51,11 @@ span {
     font-size: 10px;
 }
 
-.hidden {
-    display: none;
+/* #inventory-button:hover {
+    color: rgb(0, 102, 255);
 }
+
+.inventory-hover {
+    font-size: 30px;
+} */
+
