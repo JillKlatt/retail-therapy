@@ -10,21 +10,12 @@ function Inventory() {
 
     const inventory = state.inventory.inventory
 
-
-    function itemDescription() {
-        return (
-            <>
-            <p>Mouse Over"</p>
-            </>
-        )
-    }
-
     function renderInventory() {
-        if (inventory.length >= 0) {
+        if (inventory.length > 0) {
             return(
             <>
                 <h4 id='inventory'>Inventory:</h4>
-                {inventory.map((item, index) => <ul id='inventory-item' key={index} onMouseOver={itemDescription}>{item} <InventoryButton item={item}/></ul>)}
+                {inventory.map((item, index) => <ul id='inventory-item' key={index} >{item} <InventoryButton item={item}/></ul>)}
             </>
             )
         }
