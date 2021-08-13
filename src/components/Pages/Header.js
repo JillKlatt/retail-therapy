@@ -7,7 +7,7 @@ function Header() {
     return (
         <div>
             <div className='top-header'>
-            Retail Therapy!
+            RETAIL THERAPY
             </div>
         </div>
 
