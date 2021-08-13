@@ -23,7 +23,7 @@ function InventoryButton({item}) {
         if (inventoryItem.type === 'health'){
             dispatch(changeHP(inventoryItem.amount))
         }
-        else {
+        if (inventoryItem.type === 'health'){
             dispatch(changePoint(inventoryItem.amount))
         }
         
