@@ -37,13 +37,13 @@ input{
   background-color:burlywood;
 }
 
-.container{
+.html{
   /* overflow:hidden; */
   display: flex;
   background-image: url(./supermarketcart_maincropped.jpg);
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* background-position: center;
+  background-attachment: fixed; */
 
 }
 
