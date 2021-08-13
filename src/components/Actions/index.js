@@ -5,9 +5,9 @@ export const createUser = (userInput) => {
     }
 }
 
-export const addPoint = (amount) => {
+export const changePoint = (amount) => {
     return{
-        type: "ADD_POINT",
+        type: "CHANGE_POINT",
         payload: amount
     }
 }
