@@ -1,6 +1,6 @@
 
 .navbar {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: rgb(39, 84, 105);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
@@ -9,7 +9,7 @@
 
   .navbar a {
     float:left;
-    font-size: 45px;
+    font-size: 30px;
     color: white;
     text-align: center;
     padding: 5px 5px;
@@ -26,9 +26,6 @@
 
   .navbar-centered a {
     float: none;
-
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
   }
 
@@ -51,9 +48,9 @@
     border-width: .1em;
     border-style: solid;
     border-radius: 1px;
-    font-size: 150px;
+    font-size: 100px;
     text-shadow: 2px 2px 5px rgb(128, 0, 0);
-    font-family: fantasy;
+    font-family: 'Oswald', sans-serif;
   }
 
   .top-header:before{
@@ -61,13 +58,12 @@
     display:block;
     content: '';
     border: 10px solid orange;
-    height: 20%;
-    width: 98%;
+    height: 16.5%;
+    width: 99%;
     box-sizing: border-box;
   }
 
   .app-body{
-  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
