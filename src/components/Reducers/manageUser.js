@@ -10,10 +10,10 @@ export default function manageUser(state = {
                 username: action.payload
             }
 
-        case 'ADD_POINT':
+        case 'CHANGE_POINT':
             return {
                 ...state,
-                points: state.points + 10
+                points: state.points + action.payload
             }
 
         case 'RESET_POINTS':
