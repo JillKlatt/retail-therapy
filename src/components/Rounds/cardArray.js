@@ -21,7 +21,7 @@ export const rightCardArray = [
         hp: 0,
         choice: "Ignore her and go check the cabinets, maybe there's something that will help there", 
         buttonChoice: "Investigate!", 
-        outcome: "In the cabinets you find unrefrigerated condiments and an open offbrand Redbull, chugging it might make you feel better",
+        outcome: "In the cabinets you find unrefrigerated condiments and an open Off Brand Redbull, chugging it might make you feel better",
         inventory: "Off Brand Redbull",
         inventoryOutcome: 'health'
     },

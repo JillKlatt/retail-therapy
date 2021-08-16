@@ -1,7 +1,7 @@
 export const villainArray = [
     {
         name: "You Arrive..",
-        description: "You are met with signs advertising that 'Heroes Work Here', a familiar sign in these uncertain times. A thought crosses your mind, if you were truly heros, perhaps you'd get hazard pay. Huh. Large magnificent doors slide open with arcane power, sensing your presence. A demoic looking customer is quickly approaching you with her cart, making no attempt to serve out of the way."
+        description: "You are met with signs advertising that 'Heroes Work Here', a familiar sign in these uncertain times. A thought crosses your mind, if you were truly heros, perhaps you'd get hazard pay. Huh. Large magnificent doors slide open with arcane power, sensing your presence. A demoic looking customer is quickly approaching you with her cart, making no attempt to swerve out of the way."
     },
     {
         name: "You enter the office..",
