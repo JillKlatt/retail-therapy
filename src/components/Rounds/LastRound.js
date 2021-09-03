@@ -1,14 +1,14 @@
 import Villain from '../Player/Villain/Villain'
 import { Link } from "react-router-dom";
 
-function LastRound(props) {
+function LastRound ({submitGame, playAgain}) {
 
     function finishGame() {
-        props.submitGame()
+        submitGame()
     }
 
     function reset() {
-        props.playAgain()
+        playAgain()
     }
 
 

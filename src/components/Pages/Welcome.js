@@ -8,7 +8,6 @@ function Welcome() {
 
     const dispatch = useDispatch()
 
-    // Same as using dispatch(createUser())
     const createUserAC = bindActionCreators(createUser, dispatch)
 
     const [input, setInput] = useState(false)
