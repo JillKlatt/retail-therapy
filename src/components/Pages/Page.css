@@ -4,7 +4,6 @@
     background-color: rgb(39, 84, 105);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
-
   }
 
   .navbar a {
@@ -16,7 +15,6 @@
     margin-left: 1%;
     text-decoration: none;
     width: 30%;
-
   }
 
   .navbar a:hover{
@@ -37,8 +35,8 @@
     margin-left: 50px;
     margin-right: 50px;
     align-items: center;
-   justify-content: center;
-   background: rgba(243, 189, 107, 0.5);
+    justify-content: center;
+    background: rgba(243, 189, 107, 0.5);
   }
 
   .top-header{
@@ -64,15 +62,14 @@
   }
 
   .app-body{
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: rgb(10, 7, 7);
-  margin-left: auto;
-  margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: rgb(10, 7, 7);
+    margin-left: auto;
+    margin-right: auto;
   }
-  
 
   .leaderboard{
     display:table;
