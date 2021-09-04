@@ -2,7 +2,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { changePoint, changeRound, changeHP, addToInventory } from '../Actions/index'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './Modal.css'
 
 function ChoiceModal(props) {
@@ -17,7 +17,8 @@ function ChoiceModal(props) {
     dispatch(changeRound())
     if (props.answer === 'correct') { dispatch(changePoint(10)) }
     if (props.hp !== undefined) { dispatch(changeHP(props.hp)) }
-    if (props.inventory !== '') { dispatch(addToInventory(props.inventory)) }
+    if (props.inventory !== '' && props.inventory !== undefined) { dispatch(addToInventory(props.inventory)) }
+    console.log(props.inventory)
   }
 
   return (
