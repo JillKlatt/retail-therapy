@@ -10,6 +10,12 @@ export const inventoryArray = [
         inventoryDescription: "You held your ground and didn't let that customer ruin your day. You can use this item, lose your sense of pride, but gain a few points. Is it worth it?", 
         type: 'points',
         amount: +10
+    },
+    {
+        name: "Pictures of cats",
+        inventoryDescription: "They're really nice.", 
+        type: 'points',
+        amount: +10
     }
 ]
 

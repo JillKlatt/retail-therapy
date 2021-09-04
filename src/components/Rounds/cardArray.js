@@ -76,7 +76,8 @@ export const leftCardArray = [
         lChoice: "Lisa could have a wealth of information if we can get on her good side.. Ask her about her cats",
         lButtonChoice: "Persuasion!",
         lOutcome: "Lisa regales you with trivia and pictures of her multiple cats. In between this information, she mentions she saw the manager in the stockroom.",
-        inventory: ''
+        inventory: 'Pictures of cats',
+        inventoryOutcome: 'points'
     },
     {
         lAnswer:"correct", 
